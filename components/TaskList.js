@@ -14,12 +14,18 @@ const TaskList = () => {
     </Button>
   );
 
+  const renderItemIcon = (props) => {
+    <Icon
+      {...props}
+      name='person'
+    /> }
 
   const renderItem = ({ item, index }) => (
     <ListItem
       title={`${item.title} ${index + 1}`}
       description={`${item.description} ${index + 1}`}
       accessoryRight={renderItemAccessory}
+      accessoryLeft={renderItemIcon}
     />
   );
 

@@ -2,12 +2,13 @@ import React from 'react';
 import * as eva from '@eva-design/eva';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import { ApplicationProvider, Layout, Text, Card } from '@ui-kitten/components';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import { ApplicationProvider, Layout,  IconRegistry} from '@ui-kitten/components';
 import Login from './components/Login';
 import Home from './components/Home'
 import Main from './components/Main';
-
+import Navbar from './components/Navbar';
+import { useState } from 'react';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -17,7 +18,11 @@ const LoginScreen = () => (
   </Layout>
 );
 
+
+
 export default () => (
+  <>
+  <IconRegistry icons={EvaIconsPack} />
   <ApplicationProvider {...eva} theme={eva.light}>
 <NavigationContainer>
       
@@ -28,6 +33,7 @@ export default () => (
 
     </Navigator>
 </NavigationContainer>
-
+  <Navbar/>
   </ApplicationProvider>
+  </>
 );

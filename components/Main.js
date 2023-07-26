@@ -25,11 +25,12 @@ const Welcome = () => {
                         <Text category='h6'>No of Presentees: 41</Text>
                         <Text category='h6'>No of Absentees: 19</Text>
                     </View>
-                    <CircularProgressBar progress={0.5} style={styles.bar} />
+                    <CircularProgressBar progress={0.2} style={styles.bar} />
                 </View>
             </Card>
+        <Text category='h3'>Task List</Text>
         <TaskList/>
-
+        
         </Layout>
         </View>
     );
@@ -46,8 +47,8 @@ const styles = StyleSheet.create({
             backgroundColor:"#EEEEEE"
         },
         layouts: {
-            marginVertical:"10%",
-            marginHorizontal:"10%",
+            marginVertical:"5%",
+            marginHorizontal:"5%",
             backgroundColor:"#EEEEEE"
         },
         header:{
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
             height:200,
             borderRadius:10,
             margin:"auto",
-            marginBottom:80
+            marginBottom:40
 
         },
         shadowProp: {
