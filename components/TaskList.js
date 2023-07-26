@@ -1,37 +1,24 @@
 import React from 'react';
-import { Button, Icon, IconElement, List, ListItem } from '@ui-kitten/components';
+import { Button, Icon, List, ListItem } from '@ui-kitten/components';
 import { StyleSheet } from 'react-native';
-
-interface IListItem {
-  title: string;
-  description: string;
-}
 
 const data = new Array(8).fill({
   title: 'Title for Item',
   description: 'Description for Item',
 });
 
-export const ListAccessoriesShowcase = (): React.ReactElement => {
-
-  const renderItemAccessory = (): React.ReactElement => (
+const TaskList = () => {
+  const renderItemAccessory = () => (
     <Button size='tiny'>
-FOLLOW
+      FOLLOW
     </Button>
   );
 
-  const renderItemIcon = (props): IconElement => (
-    <Icon
-      {...props}
-      name='person'
-    />
-  );
 
-  const renderItem = ({ item, index }: { item: IListItem; index: number }): React.ReactElement => (
+  const renderItem = ({ item, index }) => (
     <ListItem
       title={`${item.title} ${index + 1}`}
       description={`${item.description} ${index + 1}`}
-      accessoryLeft={renderItemIcon}
       accessoryRight={renderItemAccessory}
     />
   );
@@ -47,6 +34,8 @@ FOLLOW
 
 const styles = StyleSheet.create({
   container: {
-    maxHeight: 192,
+    maxHeight: 400,
   },
 });
+
+export default TaskList
