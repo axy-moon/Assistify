@@ -1,6 +1,6 @@
 import { View,StyleSheet } from 'react-native'
 import React from 'react';
-import { Text,Card,CircularProgressBar,Input, Layout } from '@ui-kitten/components'
+import { Text,Card,CircularProgressBar,Input, Layout,Button } from '@ui-kitten/components'
 import TaskList from './TaskList';
 import { List } from '@ui-kitten/components';
 
@@ -28,6 +28,15 @@ const Welcome = () => {
                     <CircularProgressBar progress={0.2} style={styles.bar} />
                 </View>
             </Card>
+            <Button size='tiny'>
+      FOLLOW
+    </Button>
+    <Button size='tiny'>
+      FOLLOW
+    </Button>
+    <Button size='tiny'>
+      FOLLOW
+    </Button>
         <Text category='h3' style={{paddingBottom:20}}>Task List</Text>
         <TaskList/>
         
