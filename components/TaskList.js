@@ -40,6 +40,7 @@ const TaskList = () => {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop:20,
     maxHeight: 400,
   },
 });

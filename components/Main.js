@@ -28,7 +28,7 @@ const Welcome = () => {
                     <CircularProgressBar progress={0.2} style={styles.bar} />
                 </View>
             </Card>
-        <Text category='h3'>Task List</Text>
+        <Text category='h3' style={{paddingBottom:20}}>Task List</Text>
         <TaskList/>
         
         </Layout>
