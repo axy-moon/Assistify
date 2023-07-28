@@ -3,9 +3,11 @@ import React from 'react';
 import { Text,Card,CircularProgressBar,Input, Layout,Button } from '@ui-kitten/components'
 import TaskList from './TaskList';
 import { List } from '@ui-kitten/components';
+import Ionicons from '@expo/vector-icons/Ionicons';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
     return(
         <View style={styles.container}>
             <Layout style={styles.layouts}>
@@ -28,10 +30,12 @@ const Welcome = () => {
                     <CircularProgressBar progress={0.2} style={styles.bar} />
                 </View>
             </Card>
-    <View style={{display:"flex",flexDirection:"row",justifyContent:"space-around"}}>
-        <Button size='tiny'>Attendance</Button>
-        <Button size='tiny'>Events</Button>
-        <Button size='tiny'>Broadcast</Button>
+    <View style={styles.btncontainer}>
+        <Button > <Ionicons name="md-checkmark-circle" size={32} color="white" /></Button>
+        <Button ><MaterialIcons name="event" size={32} color="white" /></Button>
+        <Button > <Ionicons name="md-calendar-outline" size={32} color="white" /></Button>
+
+        <Button size='tiny' onPress={() => navigation.navigate('Button')}>Broadcast</Button>
     </View>
     <Text category='h3' style={{paddingBottom:20}}>Task List</Text>
         <TaskList/>
@@ -84,5 +88,11 @@ const styles = StyleSheet.create({
           Adetails: {
             display:"flex",
             flexDirection:"row"
+          },
+          btncontainer: {
+            display:"flex",
+            flexDirection:"row",
+            justifyContent:"space-between",
+            marginBottom:20
           }
 });

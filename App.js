@@ -9,6 +9,7 @@ import Home from './components/Home'
 import Main from './components/Main';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
+import SquareButton from './components/commonComponents/SquareButton';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -30,6 +31,8 @@ export default () => (
       <Screen name='Main' component={Main}/>
       <Screen name='Home' component={Home}/>
       <Screen name='Login' component={LoginScreen}/>
+      <Screen name='Button' component={SquareButton}/>
+
 
     </Navigator>
 </NavigationContainer>
