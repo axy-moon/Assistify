@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "478130939241",
+    "project_id": "assistify-f9861",
+    "storage_bucket": "assistify-f9861.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478130939241:android:ef642c76bfee7f078bc9f8",
+        "android_client_info": {
+          "package_name": "com.android.assistify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478130939241-knhrh9v1g0r3o2a3ef5v3fmn0ld4fsbf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuHszDWLDrcEL2VcZC42jUej9ezqQxSv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478130939241-knhrh9v1g0r3o2a3ef5v3fmn0ld4fsbf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
