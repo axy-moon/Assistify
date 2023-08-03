@@ -5,13 +5,14 @@ import TaskList from './TaskList';
 import { List } from '@ui-kitten/components';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import SquareButton from './commonComponents/SquareButton';
 
 
 const Welcome = ({navigation}) => {
     return(
         <View style={styles.container}>
             <Layout style={styles.layouts}>
-            <Text category='h1' style={styles.header}>Hi Ramesh</Text>
+            <Text category='h1' style={styles.header} onPress={()=>navigation.navigate('sq')}>Hi Ramesh</Text>
     
             <Input
             style={styles.input}
@@ -31,11 +32,12 @@ const Welcome = ({navigation}) => {
                 </View>
             </Card>
     <View style={styles.btncontainer}>
-        <Button > <Ionicons name="md-checkmark-circle" size={32} color="white" /></Button>
-        <Button ><MaterialIcons name="event" size={32} color="white" /></Button>
-        <Button > <Ionicons name="md-calendar-outline" size={32} color="white" /></Button>
-
-        <Button size='tiny' onPress={() => navigation.navigate('Button')}>Broadcast</Button>
+        <SquareButton onPress={()=>navigation.navigate('sq')} title="Attendance" iname="users" cl="#FF6666"  />
+        <SquareButton title="Calendar" iname="calendar" cl="#9681EB" />
+    </View>
+    <View style={styles.btncontainer}>
+        <SquareButton title="Broadcast" iname="podcast" cl="#3AA6B9" />
+        <SquareButton title="Tasks" iname="check" cl="#FFA41B" />
     </View>
     <Text category='h3' style={{paddingBottom:20}}>Task List</Text>
         <TaskList/>
@@ -67,8 +69,8 @@ const styles = StyleSheet.create({
         cards:{
             height:200,
             borderRadius:10,
-            margin:"auto",
-            marginBottom:40
+            marginBottom:40,
+            alignItems:"center"
 
         },
         shadowProp: {
@@ -92,7 +94,7 @@ const styles = StyleSheet.create({
           btncontainer: {
             display:"flex",
             flexDirection:"row",
-            justifyContent:"space-between",
+            justifyContent:"space-around",
             marginBottom:20
           }
 });

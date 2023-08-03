@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import * as eva from '@eva-design/eva';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -7,36 +8,27 @@ import { ApplicationProvider, Layout,  IconRegistry} from '@ui-kitten/components
 import Login from './components/Login';
 import Home from './components/Home'
 import Main from './components/Main';
-import Navbar from './components/Navbar';
-import { useState } from 'react';
 import SquareButton from './components/commonComponents/SquareButton';
+import { StatusBar } from 'expo-status-bar';
 
 const { Navigator, Screen } = createStackNavigator();
 
-const LoginScreen = () => (
-  <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-   <Login/>
-  </Layout>
-);
-
-
-
-export default () => (
+const App = () => (
   <>
   <IconRegistry icons={EvaIconsPack} />
   <ApplicationProvider {...eva} theme={eva.light}>
-<NavigationContainer>
-      
+    <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
-      <Screen name='Main' component={Main}/>
-      <Screen name='Home' component={Home}/>
-      <Screen name='Login' component={LoginScreen}/>
-      <Screen name='Button' component={SquareButton}/>
+        <Screen name='Login' component={Login}/>
+        <Screen name='Main' component={Main}/>
+        <Screen name='Home' component={Home}/>
+        <Screen name='sq' component={SquareButton}/>
 
-
-    </Navigator>
-</NavigationContainer>
-  <Navbar/>
+      </Navigator>
+    </NavigationContainer>
+    <StatusBar translucent />
   </ApplicationProvider>
   </>
 );
+
+export default App;
