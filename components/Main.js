@@ -6,18 +6,16 @@ import { List } from '@ui-kitten/components';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import SquareButton from './commonComponents/SquareButton';
+import Header from './Header';
 
 
 const Welcome = ({navigation}) => {
     return(
         <View style={styles.container}>
+            <Header/>
             <Layout style={styles.layouts}>
             <Text category='h1' style={styles.header} onPress={()=>navigation.navigate('sq')}>Hi Ramesh</Text>
     
-            <Input
-            style={styles.input}
-            placeholder='Search'
-            />
     
             <Card style={[styles.cards,styles.shadowProp]}>
                 <Text category='h4'>
@@ -55,11 +53,14 @@ const styles = StyleSheet.create({
             flex:1,
             justifyContent:"center",
             alignContent:"center",
-            backgroundColor:"#EEEEEE"
-        },
-        layouts: {
+            backgroundColor:"#EEEEEE",
+            paddingTop:32,
             marginVertical:"5%",
             marginHorizontal:"5%",
+
+        },
+        layouts: {
+
             backgroundColor:"#EEEEEE"
         },
         header:{

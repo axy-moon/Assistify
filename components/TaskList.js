@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Icon, List, ListItem } from '@ui-kitten/components';
+import { Button, List, ListItem } from '@ui-kitten/components';
 import { StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const data = new Array(8).fill({
   title: 'Title for Item',
@@ -9,9 +10,7 @@ const data = new Array(8).fill({
 
 const TaskList = () => {
   const renderItemAccessory = () => (
-    <Button size='tiny'>
-      FOLLOW
-    </Button>
+     <Icon name="ellipse-outline" size={32} color="#000" />
   );
 
   const renderItemIcon = (props) => {
