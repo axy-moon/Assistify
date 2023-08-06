@@ -10,6 +10,7 @@ import Home from './components/Home'
 import Main from './components/Main';
 import SquareButton from './components/commonComponents/SquareButton';
 import { StatusBar } from 'expo-status-bar';
+import Profile from './components/Profile';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -22,7 +23,8 @@ const App = () => (
         <Screen name='Login' component={Login}/>
         <Screen name='Main' component={Main}/>
         <Screen name='Home' component={Home}/>
-        <Screen name='sq' component={SquareButton}/>
+        <Screen name='Profile' component={Profile}/>
+
 
       </Navigator>
     </NavigationContainer>
