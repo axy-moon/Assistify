@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
             flex:1,
             justifyContent:"center",
             alignContent:"center",
-            backgroundColor:"#EEEEEE",
             paddingTop:32,
             paddingVertical:"5%",
             paddingHorizontal:"5%",
@@ -71,8 +70,7 @@ const styles = StyleSheet.create({
             height:200,
             borderRadius:10,
             marginBottom:40,
-            alignItems:"center"
-
+            alignItems:"center",
         },
         shadowProp: {
             shadowColor: '#171717',

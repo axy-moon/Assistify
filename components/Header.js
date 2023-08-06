@@ -13,11 +13,15 @@ export default function Header() {
     navigation.navigate('Profile')
   }
 
+  const bellIcon = () => {
+    navigation.navigate('Notifications')
+  }
+
   return (
     <View style={styles.header}>
         <Icon name='menu' size={32} color="#000" style={styles.ico} />
         <View style={{flexDirection:"row"}}>
-        <Icon name='notifications-outline' size={32} color="#000" style={styles.ico} />
+        <Icon name='notifications-outline' onPress={bellIcon} size={32} color="#000" style={styles.ico} />
         <Icon onPress={profileIcon} name='person-circle-outline' size={32} color="#000" style={styles.ico} />
         </View>
     </View>
@@ -32,7 +36,9 @@ const styles = StyleSheet.create({
         justifyContent:"space-between",
         alignItems:"center",
         maxHeight:120,
-        paddingTop:60
+        paddingTop:60,
+        backgroundColor:"#EEEEEE"
+
       },
     ico:{
         marginRight:20
