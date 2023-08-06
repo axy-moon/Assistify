@@ -1,10 +1,18 @@
 import React from 'react';
 import { TouchableWithoutFeedback, StyleSheet,Image } from 'react-native';
 import { Icon, IconElement, Input, Text , Button, Layout } from '@ui-kitten/components';
+import { ref, set } from "firebase/database";
+import { db } from '../firebase/firebase';
 
 const Login = ({navigation}) => {
     const [value, setValue] = React.useState('');
     const [value1, setValue1] = React.useState('');
+
+
+function writeUserData(userId, name, email, imageUrl) {
+  
+}
+
 
     const [secureTextEntry, setSecureTextEntry] = React.useState(true);
 
@@ -14,6 +22,15 @@ const Login = ({navigation}) => {
 
   const buttonPress = () => {
     navigation.navigate('Main')
+    /* set(ref(db, 'users/'), {
+      username: value,
+      password: value1
+    }).then(()=>{
+      alert('data updated');
+    }).catch((error) => {
+      alert(error);
+    })
+    console.log(value,value1) */
   }
 
    const GoogleIcon = () => (
@@ -81,14 +98,14 @@ const styles = StyleSheet.create({
     marginTop:30,
   },
   logButton : {
-    width:340,
+    width:420,
     backgroundColor:"#55c5de",
     borderWidth:0,
     marginTop:40
   },
   swith:{
     marginTop:40,
-    width:340
+    width:420
   },
   gbutton: {
     marginTop:20,

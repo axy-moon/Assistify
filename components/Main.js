@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
             alignContent:"center",
             backgroundColor:"#EEEEEE",
             paddingTop:32,
-            marginVertical:"5%",
-            marginHorizontal:"5%",
+            paddingVertical:"5%",
+            paddingHorizontal:"5%",
 
         },
         layouts: {

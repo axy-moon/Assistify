@@ -39,7 +39,7 @@ const TaskList = () => {
 
 const styles = StyleSheet.create({
   container: {
-    padding:20,
+    padding:16,
     backgroundColor:"#fff",
     maxHeight: 400,
   },
