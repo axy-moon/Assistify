@@ -22,10 +22,16 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "googleServicesFile" : "google-services.json"
+      "googleServicesFile": "google-services.json",
+      "package": "com.axymoon.v2"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5162aeed-3f9f-4621-af9d-f0ea49298716"
+      }
     }
   }
 }

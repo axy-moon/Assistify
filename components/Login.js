@@ -21,8 +21,8 @@ function writeUserData(userId, name, email, imageUrl) {
   };
 
   const buttonPress = () => {
-    navigation.navigate('Main')
-    /* set(ref(db, 'users/'), {
+   navigation.navigate('Main')
+/*      set(ref(db, 'users/'), {
       username: value,
       password: value1
     }).then(()=>{
