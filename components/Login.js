@@ -72,7 +72,7 @@ function writeUserData(userId, name, email, imageUrl) {
 
         <Layout style={styles.swith}>
           <Text style={{textAlign:'center'}}>Or</Text>
-          <Button accessoryLeft={GoogleIcon}>Login with Google</Button>
+          <Button accessoryLeft={GoogleIcon} onPress={()=>navigation.navigate('Register')}>Login with Google</Button>
         </Layout>
     </Layout>
     </Layout>

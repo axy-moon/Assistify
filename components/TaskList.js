@@ -4,8 +4,7 @@ import { StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const data = new Array(8).fill({
-  title: 'Title for Item',
-  description: 'Description for Item',
+  title: 'Task',
 });
 
 const TaskList = () => {
@@ -22,7 +21,6 @@ const TaskList = () => {
   const renderItem = ({ item, index }) => (
     <ListItem
       title={`${item.title} ${index + 1}`}
-      description={`${item.description} ${index + 1}`}
       accessoryRight={renderItemAccessory}
       accessoryLeft={renderItemIcon}
     />
@@ -41,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     padding:16,
     backgroundColor:"#fff",
-    maxHeight: 400,
+    maxHeight: 250,
   },
 });
 

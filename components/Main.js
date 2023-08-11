@@ -14,7 +14,7 @@ const Welcome = ({navigation}) => {
         <View style={styles.container}>
             <Header/>
             <Layout style={styles.layouts}>
-            <Text category='h1' style={styles.header} onPress={()=>navigation.navigate('sq')}>Hi Ramesh</Text>
+            <Text category='h1' style={styles.header}>Hi Ramesh</Text>
     
     
             <Card style={[styles.cards,styles.shadowProp]}>
