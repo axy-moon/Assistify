@@ -9,10 +9,6 @@ const Login = ({navigation}) => {
     const [value1, setValue1] = React.useState('');
 
 
-function writeUserData(userId, name, email, imageUrl) {
-  
-}
-
 
     const [secureTextEntry, setSecureTextEntry] = React.useState(true);
 

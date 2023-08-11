@@ -11,8 +11,8 @@ const Profile = () => {
       <View style={{flex:1,justifyContent:"center",alignItems:"center"}}>
         <Image source = {require('../assets/av.jpg')} style={styles.avatar} />
       </View>
-      <Text category='h1' style={{textAlign:"center"}}>22MX108</Text>
-      <Text category='h5' style={{textAlign:"center",marginVertical:16}}>Augxy Moon SM</Text>
+      <Text category='h1' style={{textAlign:"center"}}>22MX221</Text>
+      <Text category='h5' style={{textAlign:"center",marginVertical:16}}>Santhosh</Text>
 
       <MenuList/>
     </Layout>

@@ -14,7 +14,7 @@ const Welcome = ({navigation}) => {
         <View style={styles.container}>
             <Header/>
             <Layout style={styles.layouts}>
-            <Text category='h1' style={styles.header}>Hi Ramesh</Text>
+            <Text category='h1' style={styles.header}>Hi Santhosh</Text>
     
     
             <Card style={[styles.cards,styles.shadowProp]}>
@@ -26,7 +26,7 @@ const Welcome = ({navigation}) => {
                         <Text category='h6'>No of Presentees: 41</Text>
                         <Text category='h6'>No of Absentees: 19</Text>
                     </View>
-                    <CircularProgressBar progress={0.2} style={styles.bar} />
+                    <CircularProgressBar progress={0.68} style={styles.bar} />
                 </View>
             </Card>
     <View style={styles.btncontainer}>

@@ -1,24 +1,33 @@
 import React from 'react';
 import { TouchableWithoutFeedback, StyleSheet,Image,View } from 'react-native';
 import { Icon, IconElement, Input, Text , Button, Layout } from '@ui-kitten/components';
-import { GoogleSigninButton } from '@react-native-google-signin/google-signin';
+import { ref, set } from "firebase/database";
+import { db } from '../firebase/firebase';
 
-const Register = () => {
+const Register = ({ navigation }) => {
+  const [username, setName] = React.useState('');
+
   const [value, setValue] = React.useState('');
   const [value1, setValue1] = React.useState('');
 
+  const GoogleIcon = () => (
+    <Image source={require('../assets/google.png')}  style={{width:20,height:20}} />
+    )
 
   const buttonPress = () => {
-    navigation.navigate('Main')
- /*      set(ref(db, 'users/'), {
-       username: value,
-       password: value1
-     }).then(()=>{
-       alert('data updated');
-     }).catch((error) => {
-       alert(error);
-     })
-     console.log(value,value1) */
+
+    set(ref(db, 'users/'), {
+      username:username,
+      email: value,
+      password: value1
+    }).then(()=>{
+      alert(`${username} Registered Successfully `);
+      navigation.navigate('Login')
+
+    }).catch((error) => {
+      alert(error);
+    })
+    console.log(value,value1)
    }
 
   return (
@@ -30,6 +39,13 @@ const Register = () => {
         <Text category='h1' style={{textAlign:"left"}}>Register</Text>
         <View>
         <Layout style={{alignItems:"center"}}>
+        <Input
+        placeholder='Username'
+        style={styles.box}
+        label='Username'
+        value={username}
+        onChangeText={nextValue => setName(nextValue)}
+      />
       <Input
         placeholder='Official Email Address'
         style={styles.box}
@@ -50,7 +66,7 @@ const Register = () => {
       <Button style={styles.logButton} onPress={buttonPress}>Register</Button>
                       <Layout style={styles.swith}>
           <Text style={{textAlign:'center'}}>Or</Text>
-          <Button accessoryLeft={GoogleIcon} onPress={()=>navigation.navigate('Register')}>Login with Google</Button>
+          <Button accessoryLeft={GoogleIcon}>Register with Google</Button>
         </Layout>
       </Layout>
         </View>

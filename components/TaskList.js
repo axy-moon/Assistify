@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     padding:16,
     backgroundColor:"#fff",
-    maxHeight: 250,
+    maxHeight: 400,
   },
 });
 

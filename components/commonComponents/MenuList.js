@@ -11,11 +11,10 @@ export const MenuList = () => {
       onSelect={index => setSelectedIndex(index)}
     >
       <MenuItem title='Access Control' />
-      <MenuItem title='Change Theme'/>
-      <MenuItem title='Report' />
+      <MenuItem title='Report a Bug' />
+      <MenuItem title='Reset Semester'/>
       <MenuItem title='Settings' />
       <MenuItem title='Logout' />
-
     </Menu>
   );
 };
