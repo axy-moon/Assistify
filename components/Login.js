@@ -39,7 +39,7 @@ const Login = ({navigation}) => {
     <Layout style={styles.container}>
       <Layout style={styles.main}>
       <Layout> 
-        <Image source = {require('../assets/loginAvatar.png')} style={{width:400,height:400}} />
+        <Image source = {require('../assets/loginAvatar.png')} style={{width:340,height:340}} />
       </Layout>
 
       <Layout>
@@ -67,11 +67,12 @@ const Login = ({navigation}) => {
       <Button style={styles.logButton} onPress={buttonPress}>Login</Button>
 
         <Layout style={styles.swith}>
-          <Text style={{textAlign:'center'}}>Or</Text>
+          <Text style={{textAlign:'center',paddingBottom:20}}>Or</Text>
           <Button accessoryLeft={GoogleIcon} onPress={()=>navigation.navigate('Register')}>Login with Google</Button>
         </Layout>
     </Layout>
     </Layout>
+    <Text category='p1' onPress={()=>navigation.navigate('Register')} style={{marginTop:20}}>New User? Register Here</Text>
   </Layout>
   );
 };
@@ -82,7 +83,9 @@ const styles = StyleSheet.create({
     height:"100%",
     alignContent:"center",
     justifyContent:"center",
-    alignItems:"center"
+    alignItems:"center",
+    padding:20
+
   },
   main:{
     width:"85%",
@@ -94,14 +97,14 @@ const styles = StyleSheet.create({
     marginTop:30,
   },
   logButton : {
-    width:420,
+    width:"85%",
     backgroundColor:"#55c5de",
     borderWidth:0,
     marginTop:40
   },
   swith:{
     marginTop:40,
-    width:420
+    width:"85%"
   },
   gbutton: {
     marginTop:20,

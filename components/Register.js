@@ -33,11 +33,11 @@ const Register = ({ navigation }) => {
   return (
     <Layout style={styles.container}>
         <Layout> 
-        <Image source = {require('../assets/ui-design.png')} style={{width:400,height:400}} />
+        <Image source = {require('../assets/ui-design.png')} style={{width:185,height:250}} />
       </Layout>
 
-        <Text category='h1' style={{textAlign:"left"}}>Register</Text>
-        <View>
+        <View style={styles.main}>
+        <Text category='h2' style={{textAlign:"left"}}>Register</Text>
         <Layout style={{alignItems:"center"}}>
         <Input
         placeholder='Username'
@@ -83,9 +83,12 @@ const styles = StyleSheet.create({
       height:"100%",
       alignContent:"center",
       justifyContent:"center",
-      alignItems:"center"
+      alignItems:"center",
+      borderWidth:2,
+      borderColor:"red"
     },
     main:{
+      marginTop:30,
       width:"85%",
     },
     text: {
@@ -95,14 +98,14 @@ const styles = StyleSheet.create({
       marginTop:30,
     },
     logButton : {
-      width:420,
+      width:"100%",
       backgroundColor:"#55c8de",
       borderWidth:0,
       marginTop:40
     },
     swith:{
       marginTop:40,
-      width:420
+      width:"85%"
     },
     gbutton: {
       marginTop:20,
