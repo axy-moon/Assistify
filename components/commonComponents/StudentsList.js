@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import { List, ListItem } from '@ui-kitten/components';
+import { View,  StyleSheet } from 'react-native'
+import { List, ListItem, Text, } from '@ui-kitten/components';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -12,6 +12,10 @@ const StudentsList = () => {
   const PresentIcon = () => (
     <Icon name="checkmark-circle" size={26} color="#1F883D" />
  );
+
+ const Head = () => {
+    <Text category='h1'>Header</Text>
+ }
 
  const AbsentIcon = () => {
   <Icon name="close-circle" size={26} color="#B31312" />
@@ -31,6 +35,7 @@ const StudentsList = () => {
       style={styles.container}
       data={data}
       renderItem={renderItem}
+      ListHeaderComponent={Head}
     />
   )
 }

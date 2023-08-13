@@ -1,14 +1,25 @@
-import { View,  StyleSheet } from 'react-native'
+import { View,  StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import StudentsList from './commonComponents/StudentsList'
-import { Text, Layout } from '@ui-kitten/components'
+import { Text, Layout, Button } from '@ui-kitten/components'
+import SubjectPicker from './commonComponents/SubjectPicker'
 
 const AttendanceScreen = () => {
   return (
+    <ScrollView>
+
     <Layout style={styles.container}>
       <Text category="h3">Attendance</Text>
-      <StudentsList/>
+      <SubjectPicker/>
+       <StudentsList/>    
+        <Layout style={{display:"flex",justifyContent:"space-around",flexDirection:"row",marginBottom:20}}>
+          <Button>Discard</Button>
+          <Button>Submit</Button>
+          <Button>Save</Button>  
+
+      </Layout>
     </Layout>
+    </ScrollView>
   )
 }
 
