@@ -1,10 +1,267 @@
 [
-    {
+  {
       "rollno": "22MX101",
       "name": "Akash C"
     },
     {
       "rollno": "22MX102",
       "name": "Akshaya SS"
+    },
+    {
+      "rollno": "22MX103",
+      "name": "Anuvarsini VT"
+    },
+    {
+      "rollno": "22MX104",
+      "name": "Aravindan Y"
+    },
+    {
+      "rollno": "22MX105",
+      "name": "Aravindhan S"
+    },
+    {
+      "rollno": "22MX106",
+      "name": "Arivuselvan S"
+    },
+    {
+      "rollno": "22MX107",
+      "name": "Ashwin K"
+    },
+    {
+      "rollno": "22MX108",
+      "name": "Augxy Moon SM"
+    },
+    {
+      "rollno": "22MX109",
+      "name": "Balakumaran A"
+    },
+    {
+      "rollno": "22MX110",
+      "name": "Elamparithi RJ"
+    },
+    {
+      "rollno": "22MX111",
+      "name": "Hariharan N"
+    },
+    {
+      "rollno": "22MX112",
+      "name": "Jeyasneha B"
+    },
+    {
+      "rollno": "22MX113",
+      "name": "Ramesh M"
+    },
+    {
+      "rollno": "22MX114",
+      "name": "Manoharan R"
+    },
+    {
+      "rollno": "22MX115",
+      "name": "Nagaarjun S"
+    },
+    {
+      "rollno": "22MX116",
+      "name": "Nagularajan S"
+    },
+    {
+      "rollno": "22MX117",
+      "name": "Narayanan K"
+    },
+
+    {
+      "rollno": "22MX118",
+      "name": "Pavithra A"
+    },
+    {
+      "rollno": "22MX119",
+      "name": "Pavithraa S"
+    },
+    {
+      "rollno": "22MX120",
+      "name": "Rajkumar B"
+    },
+    {
+      "rollno": "22MX121",
+      "name": "Roshini E"
+    },
+    {
+      "rollno": "22MX122",
+      "name": "Sathiya Lingesh V"
+    },
+    {
+      "rollno": "22MX123",
+      "name": "Sonaliswamy K"
+    },
+    {
+      "rollno": "22MX124",
+      "name": "Sowmithra PK"
+    },
+
+    {
+      "rollno": "22MX125",
+      "name": "Sreeman Sudharsan"
+    },
+    {
+      "rollno": "22MX126",
+      "name": "Subashini R"
+    },
+    {
+      "rollno": "22MX127",
+      "name": "Surabi K"
+    },
+
+    {
+      "rollno": "22MX128",
+      "name": "Syed Abuthahir S"
+    },
+
+    {
+      "rollno": "22MX129",
+      "name": "Tarunika V"
+    },
+
+    {
+      "rollno": "22MX130",
+      "name": "Varuna R"
+    },
+
+   {
+      "rollno": "22MX201",
+      "name": "Akshairaj G"
+    },
+    {
+      "rollno": "22MX203",
+      "name": "Arvind AR"
+    },
+
+    {
+      "rollno": "22MX204",
+      "name": "Devadharshini DS"
+    },
+
+    {
+      "rollno": "22MX205",
+      "name": "Dharshini Priya P"
+    },
+
+    {
+      "rollno": "22MX206",
+      "name": "Faiz Banu S"
+    },
+
+    {
+      "rollno": "22MX207",
+      "name": "Gajendran S"
+    },
+
+    {
+      "rollno": "22MX208",
+      "name": "Mohankkanth E"
+    },
+    {
+      "rollno": "22MX209",
+      "name": "Naresh Parkav A"
+    },
+
+    {
+      "rollno": "22MX210",
+      "name": "Naveen PR"
+    },
+
+    {
+      "rollno": "22MX211",
+      "name": "Priyanka P"
+    },
+
+    {
+      "rollno": "22MX212",
+      "name": "Pugazhenthi L"
+    },
+  
+    {
+      "rollno": "22MX213",
+      "name": "Pujjashree M"
+    },
+
+    {
+      "rollno": "22MX214",
+      "name": "Pavithran R"
+    },
+
+    {
+      "rollno": "22MX215",
+      "name": "Ragul P"
+    },
+    {
+      "rollno": "22MX216",
+      "name": "Rahul M"
+    },
+    {
+      "rollno": "22MX217",
+      "name": "Ramanathan M"
+    },
+    {
+      "rollno": "22MX218",
+      "name": "Renganathan VR"
+    },
+    {
+      "rollno": "22MX219",
+      "name": "Sanjay Kumar S"
+    },
+    {
+      "rollno": "22MX220",
+      "name": "Sanjaykumar A"
+    },
+    {
+      "rollno": "22MX221",
+      "name": "Santhosh R"
+    },
+    
+    {
+      "rollno": "22MX222",
+      "name": "Santhosh Kumar A"
+    },
+    
+    {
+      "rollno": "22MX223",
+      "name": "Shivsaran S"
+    },
+    
+    {
+      "rollno": "22MX224",
+      "name": "Sri Gayathiri R"
+    },
+    
+    {
+      "rollno": "22MX225",
+      "name": "Sushma S"
+    },
+    
+    {
+      "rollno": "22MX226",
+      "name": "Thulasimani B"
+    },
+    
+    {
+      "rollno": "22MX227",
+      "name": "Vaishnavi V"
+    },
+    
+    {
+      "rollno": "22MX228",
+      "name": "Vikash LB"
+    },
+    
+    {
+      "rollno": "22MX229",
+      "name": "Yashika D"
+    },
+    {
+      "rollno": "22MX230",
+      "name": "Kavya S"
+    },
+    {
+      "rollno": "22MX231",
+      "name": "Varshini K"
     }
-  ]
+]
