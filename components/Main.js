@@ -11,8 +11,9 @@ import Header from './Header';
 
 const Welcome = ({navigation}) => {
     return(
+        <>
+        <Header/>
         <View style={styles.container}>
-            <Header/>
             <Layout style={styles.layouts}>
             <Text category='h1' style={styles.header}>Hi Santhosh</Text>
     
@@ -30,7 +31,7 @@ const Welcome = ({navigation}) => {
                 </View>
             </Card>
     <View style={styles.btncontainer}>
-        <SquareButton onPress={()=>navigation.navigate('sq')} title="Attendance" iname="users" cl="#FF6666"  />
+        <SquareButton onPress={()=>navigation.navigate('Attendance')} title="Attendance" iname="users" cl="#FF6666"  />
         <SquareButton title="Calendar" iname="calendar" cl="#9681EB" />
     </View>
     <View style={styles.btncontainer}>
@@ -42,6 +43,7 @@ const Welcome = ({navigation}) => {
         
         </Layout>
         </View>
+        </>
     );
 }
 

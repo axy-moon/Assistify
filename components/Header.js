@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         justifyContent:"space-between",
         alignItems:"center",
         maxHeight:120,
-        paddingTop:60,
+        paddingTop:40,
         backgroundColor:"#EEEEEE"
 
       },

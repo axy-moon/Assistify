@@ -23,7 +23,6 @@ const App = () => (
   <ApplicationProvider {...eva} theme={eva.light}>
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
-      <Screen name='Attendance' component={AttendanceScreen}/>
       <Screen name='Login' component={Login}/>
 
       <Screen name='Home' component={Home}/>
@@ -31,6 +30,7 @@ const App = () => (
         <Screen name='Main' component={Main}/>
         <Screen name='Profile' component={Profile}/>
         <Screen name='Notifications' component={Notifications}/>
+      <Screen name='Attendance' component={AttendanceScreen}/>
         
 
 
