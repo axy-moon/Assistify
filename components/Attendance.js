@@ -6,7 +6,6 @@ import SubjectPicker from './commonComponents/SubjectPicker'
 
 const AttendanceScreen = () => {
   return (
-    <ScrollView>
 
     <Layout style={styles.container}>
       <Text category="h3">Attendance</Text>
@@ -19,7 +18,6 @@ const AttendanceScreen = () => {
 
       </Layout>
     </Layout>
-    </ScrollView>
   )
 }
 

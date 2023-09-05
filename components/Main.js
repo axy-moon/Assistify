@@ -15,7 +15,6 @@ const Welcome = ({navigation}) => {
         <Header/>
         <View style={styles.container}>
             <Layout style={styles.layouts}>
-            <Text category='h1' style={styles.header}>Hi Santhosh</Text>
     
     
             <Card style={[styles.cards,styles.shadowProp]}>
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
             backgroundColor:"#EEEEEE"
         },
         header:{
-            marginBottom:40
+            borderWidth:2
         },
 
         cards:{

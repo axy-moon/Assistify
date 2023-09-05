@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View,  StyleSheet } from 'react-native'
 import { List, ListItem, Text, } from '@ui-kitten/components';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -7,10 +7,15 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import data from "../../roll.json"
 
 const StudentsList = () => {
+  const [present,setPresent] = useState(false)
 
+  const attendance = () => {
+      console.log("function")
+  }
 
   const PresentIcon = () => (
-    <Icon name="checkmark-circle" size={26} color="#1F883D" />
+    <Icon name="checkmark-circle" onPress={attendance} size={26} color="#1F883D" />
+
  );
 
  const Head = () => {
@@ -18,7 +23,7 @@ const StudentsList = () => {
  }
 
  const AbsentIcon = () => {
-  <Icon name="close-circle" size={26} color="#B31312" />
+  <Icon name="close" size={26} color="#B31312" />
  };
     
   const renderItem = ({ item }) => (
@@ -26,7 +31,7 @@ const StudentsList = () => {
       title={`${item.rollno}`}
       description={`${item.name}`}
       style={[styles.names,styles.shadowProp]}
-      accessoryRight={PresentIcon}
+      accessoryRight={AbsentIcon}
     />
   );
 
