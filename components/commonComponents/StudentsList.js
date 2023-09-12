@@ -7,31 +7,36 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import data from "../../roll.json"
 
 const StudentsList = () => {
-  const [present,setPresent] = useState(false)
+  const [present,setPresent] = useState(true)
 
-  const attendance = () => {
-      console.log("function")
+  const attendance = (e) => {
+      console.log(e)
   }
 
-  const PresentIcon = () => (
-    <Icon name="checkmark-circle" onPress={attendance} size={26} color="#1F883D" />
+  const PresentIcon = () => {
 
- );
+    if(present) {
+      return <Icon name="checkmark-circle" size={26} color="#1F883D" />
+    
+    }
+    else {
+      return <Icon name="close-circle" size={26} color="#FF0000" />
+    };
+  }
+
 
  const Head = () => {
     <Text category='h1'>Header</Text>
  }
 
- const AbsentIcon = () => {
-  <Icon name="close" size={26} color="#B31312" />
- };
     
   const renderItem = ({ item }) => (
     <ListItem
       title={`${item.rollno}`}
       description={`${item.name}`}
       style={[styles.names,styles.shadowProp]}
-      accessoryRight={AbsentIcon}
+      accessoryRight={PresentIcon}
+      onPress={attendance(item.rollno)}
     />
   );
 
@@ -51,6 +56,7 @@ const styles = StyleSheet.create({
   container: {
     padding:16,
     backgroundColor:"#fff",
+    maxHeight:"85%"
   },
   names:{
     marginVertical:2,
