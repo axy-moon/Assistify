@@ -3,6 +3,7 @@ import { TouchableWithoutFeedback, StyleSheet,Image,View } from 'react-native';
 import { Icon, IconElement, Input, Text , Button, Layout } from '@ui-kitten/components';
 import { ref, set } from "firebase/database";
 import { db } from '../firebase/firebase';
+import { createUserWithEmailAndPassword } from '@firebase/auth';
 
 const Register = ({ navigation }) => {
   const [username, setName] = React.useState('');
@@ -14,7 +15,7 @@ const Register = ({ navigation }) => {
     <Image source={require('../assets/google.png')}  style={{width:20,height:20}} />
     )
 
-  const buttonPress = () => {
+  const buttonPress = async () => {
 
     set(ref(db, 'users/'), {
       username:username,

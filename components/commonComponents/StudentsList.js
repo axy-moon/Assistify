@@ -10,7 +10,7 @@ const StudentsList = () => {
   const [present,setPresent] = useState(true)
 
   const attendance = (e) => {
-      console.log(e)
+      setPresent(!present)
   }
 
   const PresentIcon = () => {
@@ -36,7 +36,7 @@ const StudentsList = () => {
       description={`${item.name}`}
       style={[styles.names,styles.shadowProp]}
       accessoryRight={PresentIcon}
-      onPress={attendance(item.rollno)}
+      onPress={attendance}
     />
   );
 
