@@ -15,6 +15,7 @@ import Notifications from './components/Notifications';
 import Register from './components/Register';
 import AttendanceScreen from './components/Attendance';
 import SelectSimpleUsageShowcase from './components/commonComponents/SelectSimpleUsageShowcase';
+import Todo from './components/Todo';
 const { Navigator, Screen } = createStackNavigator();
 
 const App = () => (
@@ -24,7 +25,7 @@ const App = () => (
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
       <Screen name='Login' component={Login}/>
-
+      <Screen name='Todo' component={Todo}/>
       <Screen name='Home' component={Home}/>
       <Screen name='Register' component={Register}/>
         <Screen name='Main' component={Main}/>

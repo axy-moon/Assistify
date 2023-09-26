@@ -1,22 +1,33 @@
-import React from 'react';
+import React,{ useState , useEffect } from 'react';
+
 import { TouchableWithoutFeedback, StyleSheet,Image } from 'react-native';
 import { Icon, IconElement, Input, Text , Button, Layout } from '@ui-kitten/components';
-import { ref, set } from "firebase/database";
-import { db } from '../firebase/firebase';
+import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Login = ({navigation}) => {
-    const [value, setValue] = React.useState('');
-    const [value1, setValue1] = React.useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+  const [secureTextEntry, setSecureTextEntry] = React.useState(true);
 
 
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
+    }
+    if (user) navigate ("/Main");
+  }, [user, loading]);
 
-    const [secureTextEntry, setSecureTextEntry] = React.useState(true);
 
   const toggleSecureEntry = () => {
     setSecureTextEntry(!secureTextEntry);
   };
 
   const buttonPress = () => {
+    
+    //signInWithEmailAndPassword(email, password)
    navigation.navigate('Main')
 /*      set(ref(db, 'users/'), {
       username: value,
@@ -51,24 +62,24 @@ const Login = ({navigation}) => {
         placeholder='Official Email Address'
         style={styles.box}
         label='Email'
-        value={value}
-        onChangeText={nextValue => setValue(nextValue)}
+        value={email}
+        onChangeText={nextValue => setEmail(nextValue)}
       />
 
       <Input
-            value={value1}
+            value={password}
             label='Password'
             style={styles.box}
             placeholder='Password'
             secureTextEntry={true}
-            onChangeText={nextValue => setValue1(nextValue)}/>
+            onChangeText={nextValue => setPassword(nextValue)}/>
 
 
       <Button style={styles.logButton} onPress={buttonPress}>Login</Button>
 
         <Layout style={styles.swith}>
           <Text style={{textAlign:'center',paddingBottom:20}}>Or</Text>
-          <Button accessoryLeft={GoogleIcon} onPress={()=>navigation.navigate('Register')}>Login with Google</Button>
+          <Button accessoryLeft={GoogleIcon} onPress={signInWithGoogle}>Login with Google</Button>
         </Layout>
     </Layout>
     </Layout>

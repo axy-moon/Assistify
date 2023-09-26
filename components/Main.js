@@ -1,4 +1,4 @@
-import { View,StyleSheet } from 'react-native'
+import { View,StyleSheet, FlatList } from 'react-native'
 import React from 'react';
 import { Text,Card,CircularProgressBar,Input, Layout,Button } from '@ui-kitten/components'
 import TaskList from './TaskList';
@@ -7,7 +7,6 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import SquareButton from './commonComponents/SquareButton';
 import Header from './Header';
-
 
 const Welcome = ({navigation}) => {
     return(
