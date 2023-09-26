@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View,  StyleSheet } from 'react-native'
 import { List, ListItem, Text, } from '@ui-kitten/components';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -7,19 +7,28 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import data from "../../roll.json"
 
 const StudentsList = () => {
+  const [present,setPresent] = useState(true)
 
+  const attendance = (e) => {
+      setPresent(!present)
+  }
 
-  const PresentIcon = () => (
-    <Icon name="checkmark-circle" size={26} color="#1F883D" />
- );
+  const PresentIcon = () => {
+
+    if(present) {
+      return <Icon name="checkmark-circle" size={26} color="#1F883D" />
+    
+    }
+    else {
+      return <Icon name="close-circle" size={26} color="#FF0000" />
+    };
+  }
+
 
  const Head = () => {
     <Text category='h1'>Header</Text>
  }
 
- const AbsentIcon = () => {
-  <Icon name="close-circle" size={26} color="#B31312" />
- };
     
   const renderItem = ({ item }) => (
     <ListItem
@@ -27,6 +36,7 @@ const StudentsList = () => {
       description={`${item.name}`}
       style={[styles.names,styles.shadowProp]}
       accessoryRight={PresentIcon}
+      onPress={attendance}
     />
   );
 
@@ -46,6 +56,7 @@ const styles = StyleSheet.create({
   container: {
     padding:16,
     backgroundColor:"#fff",
+    maxHeight:"85%"
   },
   names:{
     marginVertical:2,

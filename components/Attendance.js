@@ -6,11 +6,10 @@ import SubjectPicker from './commonComponents/SubjectPicker'
 
 const AttendanceScreen = () => {
   return (
-    <ScrollView>
 
     <Layout style={styles.container}>
       <Text category="h3">Attendance</Text>
-      <SubjectPicker/>
+{/*       <SubjectPicker/> */}
        <StudentsList/>    
         <Layout style={{display:"flex",justifyContent:"space-around",flexDirection:"row",marginBottom:20}}>
           <Button>Discard</Button>
@@ -19,7 +18,6 @@ const AttendanceScreen = () => {
 
       </Layout>
     </Layout>
-    </ScrollView>
   )
 }
 
@@ -28,5 +26,9 @@ export default AttendanceScreen;
 const styles = StyleSheet.create({
   container: {
     marginTop:60,
+    marginBottom:20,
+    display:"flex",
+    justifyContent: "space-between",
+    height:"95%"
   },
 });

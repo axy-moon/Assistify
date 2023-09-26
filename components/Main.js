@@ -7,6 +7,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import SquareButton from './commonComponents/SquareButton';
 import Header from './Header';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Welcome = ({navigation}) => {
     return(
@@ -14,8 +15,7 @@ const Welcome = ({navigation}) => {
         <Header/>
         <View style={styles.container}>
             <Layout style={styles.layouts}>
-            <Text category='h1' style={styles.header}>Hi Santhosh</Text>
-    
+
     
             <Card style={[styles.cards,styles.shadowProp]}>
                 <Text category='h4'>
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
             backgroundColor:"#EEEEEE"
         },
         header:{
-            marginBottom:40
+            borderWidth:2
         },
 
         cards:{
