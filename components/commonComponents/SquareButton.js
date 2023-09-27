@@ -1,16 +1,16 @@
 import {  Layout,Text} from "@ui-kitten/components"
-import { View,Button,StyleSheet } from "react-native"
+import { View,Button,StyleSheet,TouchableOpacity } from "react-native"
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 const SquareButton = (props) => {
     return(
-        <>
+        <TouchableOpacity onPress={props.onPress}>
         <Layout  style={[styles.btn,{backgroundColor:props.cl}]}>
-            <Text onPress={props.onPress} style={styles.text}>{props.title}</Text>
+            <Text style={styles.text}>{props.title}</Text>
             <Icon name={props.iname} size={32} color="#F5F5F5" />
         </Layout>
-        </>
+        </TouchableOpacity>
     )
 }
 
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
       },
       text:{
-        marginVertical:19,
-        marginLeft:10,
-        color:"#fff"
+        paddingVertical:19,
+        paddingLeft:10,
+        color:"#fff",
     }
 })

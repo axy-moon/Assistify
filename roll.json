@@ -1,267 +1,382 @@
 [
   {
       "rollno": "22MX101",
-      "name": "Akash C"
+      "name": "Akash C",
+      "ispresent":"true"
     },
     {
       "rollno": "22MX102",
-      "name": "Akshaya SS"
+      "name": "Akshaya SS",
+      "ispresent":"true"
     },
     {
       "rollno": "22MX103",
-      "name": "Anuvarsini VT"
+      "name": "Anuvarsini VT",
+      "ispresent":"true"
     },
     {
       "rollno": "22MX104",
-      "name": "Aravindan Y"
+      "name": "Aravindan Y",
+      "ispresent":"true"
     },
     {
       "rollno": "22MX105",
-      "name": "Aravindhan S"
+      "name": "Aravindhan S",
+      "ispresent":"true"
     },
     {
       "rollno": "22MX106",
-      "name": "Arivuselvan S"
+      "name": "Arivuselvan S",
+      "ispresent":"true"
     },
     {
       "rollno": "22MX107",
-      "name": "Ashwin K"
+      "name": "Ashwin K",
+      "ispresent":"true"
     },
+    
     {
       "rollno": "22MX108",
-      "name": "Augxy Moon SM"
+      "name": "Augxy Moon SM",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX109",
-      "name": "Balakumaran A"
+      "name": "Balakumaran A",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX110",
-      "name": "Elamparithi RJ"
+      "name": "Elamparithi RJ",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX111",
-      "name": "Hariharan N"
+      "name": "Hariharan N",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX112",
-      "name": "Jeyasneha B"
+      "name": "Jeyasneha B",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX113",
-      "name": "Ramesh M"
+      "name": "Ramesh M",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX114",
-      "name": "Manoharan R"
+      "name": "Manoharan R",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX115",
-      "name": "Nagaarjun S"
+      "name": "Nagaarjun S",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX116",
-      "name": "Nagularajan S"
+      "name": "Nagularajan S",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX117",
-      "name": "Narayanan K"
+      "name": "Narayanan K",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX118",
-      "name": "Pavithra A"
+      "name": "Pavithra A",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX119",
-      "name": "Pavithraa S"
+      "name": "Pavithraa S",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX120",
-      "name": "Rajkumar B"
+      "name": "Rajkumar B",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX121",
-      "name": "Roshini E"
+      "name": "Roshini E",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX122",
-      "name": "Sathiya Lingesh V"
+      "name": "Sathiya Lingesh V",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX123",
-      "name": "Sonaliswamy K"
+      "name": "Sonaliswamy K",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX124",
-      "name": "Sowmithra PK"
+      "name": "Sowmithra PK",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX125",
-      "name": "Sreeman Sudharsan"
+      "name": "Sreeman Sudharsan",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX126",
-      "name": "Subashini R"
+      "name": "Subashini R",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX127",
-      "name": "Surabi K"
+      "name": "Surabi K",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX128",
-      "name": "Syed Abuthahir S"
+      "name": "Syed Abuthahir S",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX129",
-      "name": "Tarunika V"
+      "name": "Tarunika V",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX130",
-      "name": "Varuna R"
+      "name": "Varuna R",
+      "ispresent":"true"
+
     },
 
    {
       "rollno": "22MX201",
-      "name": "Akshairaj G"
+      "name": "Akshairaj G",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX203",
-      "name": "Arvind AR"
+      "name": "Arvind AR",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX204",
-      "name": "Devadharshini DS"
+      "name": "Devadharshini DS",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX205",
-      "name": "Dharshini Priya P"
+      "name": "Dharshini Priya P",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX206",
-      "name": "Faiz Banu S"
+      "name": "Faiz Banu S",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX207",
-      "name": "Gajendran S"
+      "name": "Gajendran S",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX208",
-      "name": "Mohankkanth E"
+      "name": "Mohankkanth E",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX209",
-      "name": "Naresh Parkav A"
+      "name": "Naresh Parkav A",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX210",
-      "name": "Naveen PR"
+      "name": "Naveen PR",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX211",
-      "name": "Priyanka P"
+      "name": "Priyanka P",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX212",
-      "name": "Pugazhenthi L"
+      "name": "Pugazhenthi L",
+      "ispresent":"true"
+
     },
   
     {
       "rollno": "22MX213",
-      "name": "Pujjashree M"
+      "name": "Pujjashree M",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX214",
-      "name": "Pavithran R"
+      "name": "Pavithran R",
+      "ispresent":"true"
+
     },
 
     {
       "rollno": "22MX215",
-      "name": "Ragul P"
+      "name": "Ragul P",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX216",
-      "name": "Rahul M"
+      "name": "Rahul M",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX217",
-      "name": "Ramanathan M"
+      "name": "Ramanathan M",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX218",
-      "name": "Renganathan VR"
+      "name": "Renganathan VR",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX219",
-      "name": "Sanjay Kumar S"
+      "name": "Sanjay Kumar S",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX220",
-      "name": "Sanjaykumar A"
+      "name": "Sanjaykumar A",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX221",
-      "name": "Santhosh R"
+      "name": "Santhosh R",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX222",
-      "name": "Santhosh Kumar A"
+      "name": "Santhosh Kumar A",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX223",
-      "name": "Shivsaran S"
+      "name": "Shivsaran S",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX224",
-      "name": "Sri Gayathiri R"
+      "name": "Sri Gayathiri R",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX225",
-      "name": "Sushma S"
+      "name": "Sushma S",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX226",
-      "name": "Thulasimani B"
+      "name": "Thulasimani B",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX227",
-      "name": "Vaishnavi V"
+      "name": "Vaishnavi V",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX228",
-      "name": "Vikash LB"
+      "name": "Vikash LB",
+      "ispresent":"true"
+
     },
     
     {
       "rollno": "22MX229",
-      "name": "Yashika D"
+      "name": "Yashika D",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX230",
-      "name": "Kavya S"
+      "name": "Kavya S",
+      "ispresent":"true"
+
     },
     {
       "rollno": "22MX231",
-      "name": "Varshini K"
+      "name": "Varshini K",
+      "ispresent":"true"
+
     }
+
 ]

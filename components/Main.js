@@ -35,7 +35,7 @@ const Welcome = ({navigation}) => {
     </View>
     <View style={styles.btncontainer}>
         <SquareButton title="Broadcast" iname="podcast" cl="#3AA6B9" />
-        <SquareButton title="Tasks" iname="check" cl="#FFA41B" />
+        <SquareButton title="Tasks" onPress={()=>navigation.navigate('Todo')} iname="check" cl="#FFA41B" />
     </View>
     <Text category='h3' style={{paddingBottom:20}}>Task List</Text>
         <TaskList/>

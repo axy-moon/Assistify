@@ -4,19 +4,16 @@ import StudentsList from './commonComponents/StudentsList'
 import { Text, Layout, Button } from '@ui-kitten/components'
 import SubjectPicker from './commonComponents/SubjectPicker'
 
+
 const AttendanceScreen = () => {
+  
   return (
 
     <Layout style={styles.container}>
-      <Text category="h3">Attendance</Text>
-{/*       <SubjectPicker/> */}
+      <Text category="h3" style={{padding:10}}>Attendance</Text>
+      
        <StudentsList/>    
-        <Layout style={{display:"flex",justifyContent:"space-around",flexDirection:"row",marginBottom:20}}>
-          <Button>Discard</Button>
-          <Button>Submit</Button>
-          <Button>Save</Button>  
-
-      </Layout>
+       
     </Layout>
   )
 }

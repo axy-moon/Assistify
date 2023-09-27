@@ -1,5 +1,6 @@
-import { View, Text, Button, StyleSheet, TextInput, FlatList, TouchableOpacity } from 'react-native';
+import { View,  Button, StyleSheet, TextInput, FlatList, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
+import { Text } from "@ui-kitten/components"
 import { FIRESTORE_DB } from '../firebase/firebase';
 import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -57,8 +58,21 @@ const Todo = ({ navigation }) => {
             </View>
         );
     };
+
+    function getDate() {
+        const today = new Date();
+        const month = today.getMonth() + 1;
+        const year = today.getFullYear();
+        const date = today.getDate();
+        return `${date}/${month}/${year}`;
+      }
+      
+      var d = getDate()
+
     return (
         <View style={styles.container}>
+            <Text category='h2'> Todo List </Text>
+            <Text style={{marginLeft:10, color:"#0D1282"}}>{d}</Text>
             <View style={styles.form}>
                 <TextInput
                     style={styles.input}
