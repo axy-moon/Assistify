@@ -16,6 +16,9 @@ import Register from './components/Register';
 import AttendanceScreen from './components/Attendance';
 import SelectSimpleUsageShowcase from './components/commonComponents/SelectSimpleUsageShowcase';
 import Todo from './components/Todo';
+import SubjectDetails from './components/SubjectDetails';
+
+
 const { Navigator, Screen } = createStackNavigator();
 
 const App = () => (
@@ -24,6 +27,7 @@ const App = () => (
   <ApplicationProvider {...eva} theme={eva.light}>
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
+      <Screen name='Details' component={SubjectDetails}/>
       <Screen name='Login' component={Login}/>
       <Screen name='Todo' component={Todo}/>
       <Screen name='Home' component={Home}/>
