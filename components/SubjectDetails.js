@@ -41,7 +41,6 @@ export default function SubjectDetails() {
   
     return (
       <Layout style={styles.container}>
-        <Image source = {require('../assets/stack.png')} style={{width:200,height:200,marginLeft:2}} />
 
         <Text category="h1" style={{textAlign:"center"}}>Subject Details</Text>
         <View style={styles.main}>
