@@ -3,7 +3,7 @@ import { Button, List, ListItem } from '@ui-kitten/components';
 import { StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const data = new Array(8).fill({
+const data = new Array(5).fill({
   title: 'Task',
 });
 

@@ -6,15 +6,22 @@ import React , { useState } from "react";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 import SubjectPicker from "./commonComponents/SubjectPicker";
+import AttendanceScreen from "./Attendance"
 
 
 
 export default function SubjectDetails() {
-    const [date, setDate] = useState(new Date(1598051730000));
+    const [date, setDate] = useState(new Date());
     const [selectedValue, setSelectedValue] = useState('');
+    const [sub,setSub] = useState(false)
 
     const handleSubmit = () => {
+      if(selectedValue==="") {
+        alert("Subject should be selected")
+        return }
         console.log(selectedValue)
+        setSub(true)
+
     }
 
     const onChange = (event, selectedDate) => {
@@ -42,7 +49,11 @@ export default function SubjectDetails() {
     return (
       <Layout style={styles.container}>
 
-        <Text category="h1" style={{textAlign:"center"}}>Subject Details</Text>
+        {sub ?
+        (
+        <AttendanceScreen subject={selectedValue} />):(
+        <>
+        <Text category="h1" style={{textAlign:"center",marginBottom:60}}>Subject Details</Text>
         <View style={styles.main}>
         
         <Input
@@ -60,18 +71,23 @@ export default function SubjectDetails() {
           dropdownIconColor={"#000"}
           style={styles.select}
         >
-          <Picker.Item label="SPM" value="SPM" />
-          <Picker.Item label="HCI" value="HCI" />
-          <Picker.Item label="CC" value="CC" />
-          <Picker.Item label="SNWM" value="SNWM" />
-          <Picker.Item label="ML" value="ML" />
-          <Picker.Item label="DevOps" value="DevOps" />
+          <Picker.Item label="Choose Subject" value="" />
+          <Picker.Item label="CC - 20MX31" value="Cloud Computing" />
+          <Picker.Item label="SPM - 20MXAB" value="Software Project Management" />
+          <Picker.Item label="HCI - 20MXBJ" value="Human Computer Interaction" />
+          <Picker.Item label="SNWM - 20MXBL" value="Social Network and Web Mining" />
+          <Picker.Item label="ML - 20MXBC" value="Machine Learning" />
+          <Picker.Item label="DevOps - 20MXBO" value="DevOps" />
+          <Picker.Item label="MAD - 20MX36" value="Mobile Application Development" />
 
         </Picker>
       </View>
         
         <Button onPress={handleSubmit} style={{"marginTop":40}} status='success'>Submit</Button>
-        </View>
+        </View> 
+        </>)
+
+        }
       </Layout>
     )
 }
@@ -97,6 +113,13 @@ const styles = StyleSheet.create({
     btn : {
         marginTop:20
     },
+
+    select: {
+      borderColor:"#000",
+      borderWidth:1,
+      backgroundColor:"#F1EFEF",
+      marginTop:6
+  }
 
     
 });

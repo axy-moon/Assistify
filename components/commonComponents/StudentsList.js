@@ -5,9 +5,13 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import data from "../../roll.json";
 import { getDatabase,  push, ref, set } from "firebase/database";
 import { db } from '../../firebase/firebase';
+import { useNavigation } from '@react-navigation/native';
 
-const StudentsList = () => {
+
+const StudentsList = ({ subject }) => {
   const [students, setStudents] = useState(data);
+
+  const navigation = useNavigation()
 
   const getCurrentDateKey = () => {
     const today = new Date();
@@ -30,16 +34,27 @@ const StudentsList = () => {
   };
 
   const handleSubmit = () => {
-    var sname = "SPM"
+    var sname = subject
     const database = getDatabase();
     const currentDateKey = getCurrentDateKey();
-    const databaseRef = ref(database, `/students/${currentDateKey}/${sname}`);
+
+    absentees = []
+    for(var i=0;i<students.length;i++) {
+      if(students[i].ispresent === false){
+        absentees.push(students[i])
+      }
+
+    }
+    const databaseRef = ref(database, `/attendance/${currentDateKey}/${sname}`);
 
     // Push a new entry for the students for the current date
     const newEntryRef = push(databaseRef);
     set(newEntryRef, students)
       .then(() => {
         console.log('Student data for the current date has been successfully saved to Firebase.');
+        alert("Attendance Stored Successfully")
+        console.log(absentees)
+        
       })
       .catch((error) => {
         console.error('Error saving student data to Firebase:', error);
@@ -57,6 +72,10 @@ const StudentsList = () => {
     });
   };
 
+  const goback = () => {
+    navigation.navigate("Main")
+  }
+
   const reset = () => {
     setStudents(prevStudents => {
       const updatedStudents = prevStudents.map(student => ({
@@ -65,7 +84,7 @@ const StudentsList = () => {
       }));
       return updatedStudents;
     });
-    console.log("Loop exited")
+    alert("Attendance Reset Successfully")
   }
 
   const renderItem = ({ item }) => {
@@ -94,7 +113,7 @@ const StudentsList = () => {
 
   const Head = () => (
     <View style={styles.header}>
-      <Text category='h1'></Text>
+      <Text onPress={goback} style={styles.toggleText}>Back</Text>
       <Text onPress={reset} style={styles.toggleText}>Reset</Text>
       <Text onPress={toggleAllAttendance} style={styles.toggleText}>Toggle All</Text>
       <Text onPress={handleSubmit} style={styles.toggleText}>Submit</Text>
@@ -116,7 +135,6 @@ const styles = StyleSheet.create({
   container: {
     padding: 16,
     backgroundColor: "#fff",
-    maxHeight: "85%"
   },
   names: {
     marginVertical: 2,

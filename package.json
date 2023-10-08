@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@eva-design/eva": "^2.2.0",
+    "@react-native-community/datetimepicker": "6.7.3",
     "@react-native-firebase/database": "^18.3.0",
     "@react-native-google-signin/google-signin": "^10.0.1",
     "@react-native-picker/picker": "2.4.8",
@@ -22,11 +23,14 @@
     "expo-sample-pedometer": "^0.2.0",
     "expo-status-bar": "~1.4.4",
     "firebase": "^10.1.0",
+    "firebase-admin": "^11.11.0",
+    "moment": "^2.29.4",
+    "nodemailer": "^6.9.5",
     "react": "18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-native": "0.71.8",
-    "react-native-gesture-handler": "~2.9.0",
-    "@react-native-community/datetimepicker": "6.7.3"
+    "react-native-calendars": "^1.1301.0",
+    "react-native-gesture-handler": "~2.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

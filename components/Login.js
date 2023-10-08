@@ -28,6 +28,10 @@ const Login = ({navigation}) => {
   const buttonPress = () => {
     
     //signInWithEmailAndPassword(email, password)
+   /*  if(email === "" || password === ""){
+      alert("All Fields are Required")
+      return
+    } */
    navigation.navigate('Main')
 /*      set(ref(db, 'users/'), {
       username: value,

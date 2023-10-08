@@ -5,14 +5,16 @@ import { Text, Layout, Button } from '@ui-kitten/components'
 import SubjectPicker from './commonComponents/SubjectPicker'
 
 
-const AttendanceScreen = () => {
+const AttendanceScreen = ({ subject }) => {
   
   return (
 
     <Layout style={styles.container}>
-      <Text category="h3" style={{padding:10}}>Attendance</Text>
+      <Text category="h3" style={{paddingHorizontal:10}}>Attendance</Text>
+      <Text category="p1" style={{padding:10}}>Subject : {subject}</Text>
+
       
-       <StudentsList/>    
+       <StudentsList subject={subject}/>    
        
     </Layout>
   )
