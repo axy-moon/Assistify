@@ -28,9 +28,9 @@ const App = () => (
   <ApplicationProvider {...eva} theme={eva.light}>
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
+      <Screen name='Details' component={SubjectDetails}/>
       <Screen name='Dashboard' component={DashboardPage}/>
       <Screen name='Login' component={Login}/>
-      <Screen name='Details' component={SubjectDetails}/>
       <Screen name='Todo' component={Todo}/>
       <Screen name='Home' component={Home}/>
       <Screen name='Register' component={Register}/>

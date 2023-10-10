@@ -8,18 +8,18 @@ import { db } from '../../firebase/firebase';
 import { useNavigation } from '@react-navigation/native';
 
 
-const StudentsList = ({ subject }) => {
+const StudentsList = ({ subject , date }) => {
   const [students, setStudents] = useState(data);
 
   const navigation = useNavigation()
 
-  const getCurrentDateKey = () => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
-    const day = String(today.getDate()).padStart(2, '0');
+    const getCurrentDateKey = (date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
   };
+ 
 
   const toggleAttendance = (rollno) => {
     setStudents(prevStudents => {
@@ -35,8 +35,8 @@ const StudentsList = ({ subject }) => {
 
   const handleSubmit = () => {
     var sname = subject
+    const curDate = getCurrentDateKey(date)
     const database = getDatabase();
-    const currentDateKey = getCurrentDateKey();
 
     absentees = []
     for(var i=0;i<students.length;i++) {
@@ -45,7 +45,7 @@ const StudentsList = ({ subject }) => {
       }
 
     }
-    const databaseRef = ref(database, `/attendance/${currentDateKey}/${sname}`);
+    const databaseRef = ref(database, `/attendance/${curDate}/${sname}`);
 
     // Push a new entry for the students for the current date
     const newEntryRef = push(databaseRef);

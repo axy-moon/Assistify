@@ -1,11 +1,12 @@
 import { View,  StyleSheet, ScrollView } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import StudentsList from './commonComponents/StudentsList'
 import { Text, Layout, Button } from '@ui-kitten/components'
 import SubjectPicker from './commonComponents/SubjectPicker'
 
 
-const AttendanceScreen = ({ subject }) => {
+const AttendanceScreen = ({ subject , date }) => {
+    const [ndate,setDate] = useState(date)
   
   return (
 
@@ -14,7 +15,7 @@ const AttendanceScreen = ({ subject }) => {
       <Text category="p1" style={{padding:10}}>Subject : {subject}</Text>
 
       
-       <StudentsList subject={subject}/>    
+       <StudentsList subject={subject} date={date}/>    
        
     </Layout>
   )

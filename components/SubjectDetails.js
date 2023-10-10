@@ -2,7 +2,7 @@ import {  Layout,Text, Input,Button} from "@ui-kitten/components"
 import { View,StyleSheet,TouchableOpacity,Image } from "react-native"
 import {Picker} from '@react-native-picker/picker';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import React , { useState } from "react";
+import React , { useState , useEffect } from "react";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 import SubjectPicker from "./commonComponents/SubjectPicker";
@@ -51,7 +51,7 @@ export default function SubjectDetails() {
 
         {sub ?
         (
-        <AttendanceScreen subject={selectedValue} />):(
+        <AttendanceScreen subject={selectedValue} date={date} />):(
         <>
         <Text category="h1" style={{textAlign:"center",marginBottom:60}}>Subject Details</Text>
         <View style={styles.main}>

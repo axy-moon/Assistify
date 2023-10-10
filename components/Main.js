@@ -1,5 +1,5 @@
 import { View,StyleSheet, FlatList } from 'react-native'
-import React from 'react';
+import React , { useEffect } from 'react';
 import { Text,Card,CircularProgressBar,Input, Layout,Button } from '@ui-kitten/components'
 import TaskList from './TaskList';
 import { List } from '@ui-kitten/components';
@@ -10,6 +10,9 @@ import Header from './Header';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Welcome = ({navigation}) => {
+
+
+
     return(
         <>
         <Header/>
