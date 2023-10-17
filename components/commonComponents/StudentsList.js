@@ -6,6 +6,7 @@ import data from "../../roll.json";
 import { getDatabase,  push, ref, set } from "firebase/database";
 import { db } from '../../firebase/firebase';
 import { useNavigation } from '@react-navigation/native';
+import axios from 'axios';
 
 
 const StudentsList = ({ subject , date }) => {
@@ -33,7 +34,11 @@ const StudentsList = ({ subject , date }) => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+
+   
+
+
     var sname = subject
     const curDate = getCurrentDateKey(date)
     const database = getDatabase();
@@ -59,7 +64,20 @@ const StudentsList = ({ subject , date }) => {
       .catch((error) => {
         console.error('Error saving student data to Firebase:', error);
       });
+ 
+      console.log(absentees)
+      let temp = absentees.map(student => student.rollno).join(',')
+      temp = JSON.stringify(temp)
+      const baseUrl = 'http://localhost:3000/api/email';
+      const response = await axios.post(baseUrl,{
+      
+     "from" : "assistify.psgtech@gmail.com",
+     "to" : "22mx205@psgtech.ac.in",
+     "subject" : `Assistify - Attendance Report for ${subject}`,
+     "text" : `\nAbsentees for Cloud Computing Class on ${date}: \n \n \n ${temp} \n\n-Assistify`
+     }) 
   
+
   }
 
   const toggleAllAttendance = () => {
