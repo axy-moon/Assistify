@@ -34,7 +34,8 @@
     "react-firebase-hooks": "^5.1.1",
     "react-native": "0.71.8",
     "react-native-calendars": "^1.1301.0",
-    "react-native-gesture-handler": "~2.9.0"
+    "react-native-gesture-handler": "~2.9.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

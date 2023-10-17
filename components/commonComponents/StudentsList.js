@@ -74,7 +74,7 @@ const StudentsList = ({ subject , date }) => {
      "from" : "assistify.psgtech@gmail.com",
      "to" : "22mx205@psgtech.ac.in",
      "subject" : `Assistify - Attendance Report for ${subject}`,
-     "text" : `\nAbsentees for Cloud Computing Class on ${date}: \n \n \n ${temp} \n\n-Assistify`
+     "text" : `\nAbsentees for ${subject} class on ${date}: \n \n \n ${temp} \n\n -Assistify`
      }) 
   
 

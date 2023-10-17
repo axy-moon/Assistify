@@ -18,7 +18,7 @@ import SelectSimpleUsageShowcase from './components/commonComponents/SelectSimpl
 import Todo from './components/Todo';
 import SubjectDetails from './components/SubjectDetails';
 import DashboardPage from './components/DashboardPage';
-
+import ChatScreen from './components/ChatScreen';
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -29,15 +29,16 @@ const App = () => (
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
       <Screen name='Login' component={Login}/>
-      <Screen name='Details' component={SubjectDetails}/>
+        <Screen name='Main' component={Main}/>
       <Screen name='Dashboard' component={DashboardPage}/>
+      <Screen name='Details' component={SubjectDetails}/>
       <Screen name='Todo' component={Todo}/>
       <Screen name='Home' component={Home}/>
       <Screen name='Register' component={Register}/>
-        <Screen name='Main' component={Main}/>
         <Screen name='Profile' component={Profile}/>
         <Screen name='Notifications' component={Notifications}/>
       <Screen name='Attendance' component={AttendanceScreen}/>
+      <Screen name='Chat' component={ChatScreen}/>
 
         
 
