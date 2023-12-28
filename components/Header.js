@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-between",
         alignItems:"center",
-        maxHeight:120,
-        paddingTop:40,
-        backgroundColor:"#EEEEEE"
-
+        marginHorizontal:"1%",
+        backgroundColor:"#EEEEEE",
+        maxHeight:50,
+        marginTop:40
       },
     ico:{
-        marginRight:20
+        marginRight:10
     }
 });

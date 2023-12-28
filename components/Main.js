@@ -1,4 +1,4 @@
-import { View,StyleSheet, FlatList } from 'react-native'
+import { View,StyleSheet, FlatList, Image } from 'react-native'
 import React , { useEffect } from 'react';
 import { Text,Card,CircularProgressBar,Input, Layout,Button } from '@ui-kitten/components'
 import TaskList from './TaskList';
@@ -19,21 +19,23 @@ const Welcome = ({navigation}) => {
         <>
         <Header/>
         <View style={styles.container}>
+            <Text category='h1' style={{marginVertical:30}}>Home</Text>
             <Layout style={styles.layouts}>
 
-    
             <Card style={[styles.cards,styles.shadowProp]}>
-                <Text category='h4'>
-                    Hi Augxy Moon
-                </Text>
-                <View style={styles.Adetails}>
-                    <View style={{paddingVertical:26}}>
-                        <Text category='h6'>Date : 20/10/2023</Text>
-                        <Text category='h6'>Day : Friday</Text>
-                        <Button onPress={()=>navigation.navigate('Dashboard')} style={{marginTop:10}}>Dashboard</Button>
-                    </View>
+                <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                <View style={{width:"30%"}}>
+                <Image source={require('../assets/graduates.png')} style={{width:100,height:100}} />
+                    <Text style={{color:"#fff",padding:2,margin:5,textAlign:"center"}} category='h6'>2nd Year MCA</Text>
+                </View>
+                <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
+                    <Text style={{color:"#fff"}}>Date : 28-12-2023</Text>
+                    <Text style={{color:"#fff"}}>Day : Thursday</Text>
+                    <Text style={{color:"#fff",fontWeight:700}}>Total Strength : 60</Text>
+                </View>
                 </View>
             </Card>
+            
     <View style={styles.btncontainer}>
         <SquareButton onPress={()=>navigation.navigate('Details')} title="Attendance" iname="users" cl="#FF6666"  />
         <SquareButton title="Calendar" iname="calendar" cl="#9681EB" />
@@ -42,10 +44,10 @@ const Welcome = ({navigation}) => {
         <SquareButton title="Broadcast" onPress={()=>navigation.navigate('Chat')} iname="podcast" cl="#3AA6B9" />
         <SquareButton title="Tasks" onPress={()=>navigation.navigate('Todo')} iname="check" cl="#FFA41B" />
     </View>
-    <Text category='h3' style={{paddingBottom:20}}>Task List</Text>
-        <TaskList/>
         
         </Layout>
+        <Text category='h3' style={{marginVertical:10}}>Today's Absentees</Text>
+
         </View>
         </>
     );
@@ -54,14 +56,12 @@ const Welcome = ({navigation}) => {
 export default Welcome
 
 const styles = StyleSheet.create({
-
         container: {
             flex:1,
-            justifyContent:"center",
             alignContent:"center",
-            paddingTop:32,
-            paddingVertical:"5%",
-            paddingHorizontal:"5%",
+            marginHorizontal:"5%",
+            backgroundColor:"#EEEEEE"
+
 
         },
         layouts: {
@@ -73,10 +73,11 @@ const styles = StyleSheet.create({
         },
 
         cards:{
-            height:200,
             borderRadius:10,
-            marginBottom:40,
-            alignItems:"center",
+            marginBottom:30,
+            backgroundColor: "#176B87",
+            display:"flex",
+            flexWrap:"wrap"
         },
         shadowProp: {
             shadowColor: '#171717',
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
           },
           Adetails: {
             display:"flex",
-            flexDirection:"row"
+            flexDirection:"row",
           },
           btncontainer: {
             display:"flex",

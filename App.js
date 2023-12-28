@@ -28,8 +28,8 @@ const App = () => (
   <ApplicationProvider {...eva} theme={eva.light}>
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
-      <Screen name='Login' component={Login}/>
         <Screen name='Main' component={Main}/>
+      <Screen name='Login' component={Login}/>
       <Screen name='Dashboard' component={DashboardPage}/>
       <Screen name='Details' component={SubjectDetails}/>
       <Screen name='Todo' component={Todo}/>
