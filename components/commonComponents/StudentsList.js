@@ -34,7 +34,7 @@ const StudentsList = ({ subject , date }) => {
     });
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit =  async() => {
 
    
 
@@ -68,14 +68,19 @@ const StudentsList = ({ subject , date }) => {
       console.log(absentees)
       let temp = absentees.map(student => student.rollno).join(',')
       temp = JSON.stringify(temp)
-      const baseUrl = 'http://localhost:3000/api/email';
-      const response = await axios.post(baseUrl,{
-      
-     "from" : "assistify.psgtech@gmail.com",
-     "to" : "22mx205@psgtech.ac.in",
-     "subject" : `Assistify - Attendance Report for ${subject}`,
-     "text" : `\nAbsentees for ${subject} class on ${date}: \n \n \n ${temp} \n\n -Assistify`
-     }) 
+      const baseUrl = 'http://192.168.249.10:3000/api/email';
+      try {
+        const response = await axios.post(baseUrl, {
+          "from": "assistify.psgtech@gmail.com",
+          "to": "22mx108@psgtech.ac.in",
+          "subject": `Assistify - Attendance Report for ${subject}`,
+          "text": `\nAbsentees for ${subject} class on ${date}: \n \n \n ${temp} \n\n -Assistify`
+        });
+        console.log(response.data); // Log the response data
+      } catch (error) {
+        console.error('Error sending email:', error);
+        // Handle the error appropriately, e.g., show an error message to the user.
+      }
   
 
   }

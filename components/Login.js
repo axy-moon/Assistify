@@ -1,9 +1,11 @@
 import React,{ useState , useEffect } from 'react';
-
+import {decode as atob, encode as btoa} from 'base-64'
 import { TouchableWithoutFeedback, StyleSheet,Image } from 'react-native';
 import { Icon, IconElement, Input, Text , Button, Layout } from '@ui-kitten/components';
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { ref, set,get,child } from "firebase/database";
+import { db } from '../firebase/firebase';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState("");
@@ -12,13 +14,6 @@ const Login = ({navigation}) => {
   const [secureTextEntry, setSecureTextEntry] = React.useState(true);
 
 
-  useEffect(() => {
-    if (loading) {
-      // maybe trigger a loading screen
-      return;
-    }
-    if (user) navigate ("/Main");
-  }, [user, loading]);
 
 
   const toggleSecureEntry = () => {
@@ -28,11 +23,29 @@ const Login = ({navigation}) => {
   const buttonPress = () => {
     
     //signInWithEmailAndPassword(email, password)
-   /*  if(email === "" || password === ""){
+    if(email === "" || password === ""){
       alert("All Fields are Required")
-      return
-    } */
-   navigation.navigate('Main')
+      return }
+    const dbRef = ref(db);
+    get(child(dbRef, 'users')).then((snapshot) => {
+      if (snapshot.exists()) {
+        arr = snapshot.toJSON()
+        console.log("Reports: ",arr)
+        if(arr.email==email && arr.password==btoa(password)) {
+          navigation.navigate('Main')
+         }
+         else {
+           alert("Invalid Credentials")
+         }
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+
+   
+
 /*      set(ref(db, 'users/'), {
       username: value,
       password: value1

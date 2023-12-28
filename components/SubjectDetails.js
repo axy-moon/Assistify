@@ -7,6 +7,8 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 import SubjectPicker from "./commonComponents/SubjectPicker";
 import AttendanceScreen from "./Attendance"
+import { ref, set,get,child } from "firebase/database";
+import { db } from '../firebase/firebase';
 
 
 
@@ -21,6 +23,18 @@ export default function SubjectDetails() {
         return }
         console.log(selectedValue)
         setSub(true)
+
+        const dbRef = ref(db);
+        get(child(dbRef, `course/2023/1st Year/-NhB5NDWHqE2oszNk8IH/`)).then((snapshot) => {
+          if (snapshot.exists()) {
+            arr = snapshot.toJSON()
+            console.log("Subj",arr.title)
+          } else {
+            console.log("No data available");
+          }
+        }).catch((error) => {
+          console.error(error);
+        });
 
     }
 

@@ -8,6 +8,8 @@ import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import SquareButton from './commonComponents/SquareButton';
 import Header from './Header';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { FIRESTORE_DB } from '../firebase/firebase';
+import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
 
 const Welcome = ({navigation}) => {
 
@@ -22,14 +24,14 @@ const Welcome = ({navigation}) => {
     
             <Card style={[styles.cards,styles.shadowProp]}>
                 <Text category='h4'>
-                    Attendance
+                    Hi Augxy Moon
                 </Text>
                 <View style={styles.Adetails}>
                     <View style={{paddingVertical:26}}>
-                        <Text category='h6'>No of Presentees: 41</Text>
-                        <Text category='h6'>No of Absentees: 19</Text>
+                        <Text category='h6'>Date : 20/10/2023</Text>
+                        <Text category='h6'>Day : Friday</Text>
+                        <Button onPress={()=>navigation.navigate('Dashboard')} style={{marginTop:10}}>Dashboard</Button>
                     </View>
-                    <CircularProgressBar progress={0.68} style={styles.bar} />
                 </View>
             </Card>
     <View style={styles.btncontainer}>
