@@ -10,6 +10,7 @@ import Header from './Header';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { FIRESTORE_DB } from '../firebase/firebase';
 import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
+import FlatListBasic from './commonComponents/FlatListBasic';
 
 const Welcome = ({navigation}) => {
 
@@ -20,34 +21,36 @@ const Welcome = ({navigation}) => {
         <Header/>
         <View style={styles.container}>
             <Text category='h1' style={{marginVertical:30}}>Home</Text>
-            <Layout style={styles.layouts}>
-
             <Card style={[styles.cards,styles.shadowProp]}>
                 <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
-                <View style={{width:"30%"}}>
-                <Image source={require('../assets/graduates.png')} style={{width:100,height:100}} />
-                    <Text style={{color:"#fff",padding:2,margin:5,textAlign:"center"}} category='h6'>2nd Year MCA</Text>
-                </View>
-                <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
-                    <Text style={{color:"#fff"}}>Date : 28-12-2023</Text>
-                    <Text style={{color:"#fff"}}>Day : Thursday</Text>
-                    <Text style={{color:"#fff",fontWeight:700}}>Total Strength : 60</Text>
-                </View>
+                    <View style={{width:"30%"}}>
+                        <Image source={require('../assets/graduates.png')} style={{width:100,height:100}} />
+                        <Text style={{color:"#fff",padding:2,margin:5,textAlign:"center"}} category='h6'>2nd Year MCA</Text>
+                    </View>
+                
+                    <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
+                        <Text style={{color:"#fff"}}>Date : 28-12-2023</Text>
+                        <Text style={{color:"#fff"}}>Day : Thursday</Text>
+                        <Text style={{color:"#fff",fontWeight:700}}>Total Strength : 60</Text>
+                    </View>
                 </View>
             </Card>
             
-    <View style={styles.btncontainer}>
-        <SquareButton onPress={()=>navigation.navigate('Details')} title="Attendance" iname="users" cl="#FF6666"  />
-        <SquareButton title="Calendar" iname="calendar" cl="#9681EB" />
-    </View>
-    <View style={styles.btncontainer}>
-        <SquareButton title="Broadcast" onPress={()=>navigation.navigate('Chat')} iname="podcast" cl="#3AA6B9" />
-        <SquareButton title="Tasks" onPress={()=>navigation.navigate('Todo')} iname="check" cl="#FFA41B" />
-    </View>
-        
-        </Layout>
-        <Text category='h3' style={{marginVertical:10}}>Today's Absentees</Text>
+            <View style={styles.btncontainer}>
+                <SquareButton onPress={()=>navigation.navigate('Details')} title="Attendance" iname="users" cl="#FF6666"  />
+                <SquareButton title="Calendar" iname="calendar" cl="#9681EB" />
+            </View>
 
+            <View style={styles.btncontainer}>
+                <SquareButton title="Broadcast" onPress={()=>navigation.navigate('Chat')} iname="podcast" cl="#3AA6B9" />
+                <SquareButton title="Tasks" onPress={()=>navigation.navigate('Todo')} iname="check" cl="#FFA41B" />
+            </View>
+        
+            <View style={{flexDirection:"row",alignItems:"center",justifyContent:"space-between"}}>
+                <Text category='h3' style={{marginVertical:10}}>Today's Absentees</Text>
+                <Text>See all</Text>
+            </View>
+            <FlatListBasic/>
         </View>
         </>
     );
@@ -63,10 +66,6 @@ const styles = StyleSheet.create({
             backgroundColor:"#EEEEEE"
 
 
-        },
-        layouts: {
-
-            backgroundColor:"#EEEEEE"
         },
         header:{
             borderWidth:2

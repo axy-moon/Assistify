@@ -30,13 +30,11 @@ export default function Header() {
 
 const styles = StyleSheet.create({
     header: {
-        flex:1,
         flexDirection:"row",
         justifyContent:"space-between",
         alignItems:"center",
         marginHorizontal:"1%",
         backgroundColor:"#EEEEEE",
-        maxHeight:50,
         marginTop:40
       },
     ico:{
