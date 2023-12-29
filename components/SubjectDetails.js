@@ -2,7 +2,7 @@ import {  Layout,Text, Input,Button} from "@ui-kitten/components"
 import { View,StyleSheet,TouchableOpacity,Image } from "react-native"
 import { Card } from "@ui-kitten/components";
 import {Picker} from '@react-native-picker/picker';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/Ionicons';
 import React , { useState , useEffect } from "react";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
@@ -119,8 +119,20 @@ export default function SubjectDetails() {
                     </View>
                 </View>
           </Card>
+          <View style={{marginHorizontal:"3%"}}>
+                <Text>Select the date for Attendance</Text>
+              <View style={{flexDirection:"row"}}>
+                    <View style={styles.box}>
+                        <Icon name="calendar" size={20} color="#000" />
+                        <Text style={{fontSize:20 , paddingLeft:10,fontWeight:700}}>{date.toLocaleDateString()}</Text>
+                    </View>
 
-          <View style={{flexDirection:"row",flexWrap:"wrap",width:"100%",justifyContent:"center"}}>
+                    <Button  onPress={showDatepicker} style={{width:"28%",marginVertical:10,backgroundColor:"#FFC436",borderWidth:0}} >Select</Button>
+              </View>
+
+          </View>
+
+          <View style={{flexDirection:"row",flexWrap:"wrap",width:"100%",height:"55%",justifyContent:"center"}}>
             <View style={styles.grid}>
                 <Text style={{textAlign:"center"}}>20MX31</Text>
                       <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
@@ -159,9 +171,10 @@ export default function SubjectDetails() {
             </View>
           </View>
 
-
-
+          <Button style={{backgroundColor:"#FF6666",borderColor:"transparent"}}>Confirm</Button>
         </View>
+
+
       </Layout>
     )
 }
@@ -174,7 +187,8 @@ const styles = StyleSheet.create({
     },
 
     gridContainer : {
-      marginHorizontal:"5%"
+      marginHorizontal:"5%",
+      height:"100%"
 
     },
 
@@ -194,8 +208,8 @@ const styles = StyleSheet.create({
 
     grid: {
       width:"30%",
-      borderWidth:2,
       height:120,
+      backgroundColor:"#96B6C5",
       borderRadius:5,
       justifyContent:"center",
       alignItems:"center",
@@ -214,7 +228,14 @@ const styles = StyleSheet.create({
     },
     box : {
         marginVertical:10,
-    },
+        width:"70%",
+        marginRight:10,
+        paddingLeft:20,
+        borderRadius: 4,
+        backgroundColor:"#c7c8c9",
+        flexDirection:"row",
+        alignItems:"center"
+      },
     btn : {
         marginTop:20
     },

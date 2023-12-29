@@ -30,7 +30,8 @@ const Welcome = ({navigation}) => {
                 
                     <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
                         <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>29 December</Text>
-                        <Text style={{color:"#fff",alignItems:"flex-end",fontWeight:700,marginTop:20}}>Total Strength : 60</Text>
+                        <Text style={{color:"#fff",alignItems:"flex-end",fontWeight:700,marginBottom:10}}>Friday</Text>
+                    <Button style={{backgroundColor:"#64CCC5",borderWidth:0}}>View Dashboard</Button>
                     </View>
                 </View>
             </Card>
