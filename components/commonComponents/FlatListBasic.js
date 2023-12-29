@@ -9,9 +9,10 @@ const styles = StyleSheet.create({
     paddingTop: 22,
   },
   item: {
-    padding: 10,
+    paddingVertical: 16,
     fontSize: 18,
-    height: 44,
+    color:"#fff",
+    fontWeight:700
   },
   listItem : {
     marginBottom:5,
@@ -28,15 +29,15 @@ const FlatListBasic = () => {
     <View style={styles.container}>
       <FlatList
         data={[
-          {key: 'Devin'},
-          {key: 'Dan'},
-          {key: 'Dominic'},
-          {key: 'Jackson'},
-          {key: 'James'},
+          {key: '22MX108'},
+          {key: '22MX111'},
+          {key: '22MX113'},
+          {key: '22MX116'},
+          {key: '22MX128'},
         ]}
         renderItem={({item}) => 
       <View style={styles.listItem}>
-        <Icon name="user" size={20} color="#F5F5F5" style={{padding:16}} />
+        <Icon name="user" size={20} color="#000" style={{padding:16}} />
         <Text style={styles.item}>{item.key}</Text>
 
       </View>

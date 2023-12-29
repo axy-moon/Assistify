@@ -1,5 +1,6 @@
 import {  Layout,Text, Input,Button} from "@ui-kitten/components"
 import { View,StyleSheet,TouchableOpacity,Image } from "react-native"
+import { Card } from "@ui-kitten/components";
 import {Picker} from '@react-native-picker/picker';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import React , { useState , useEffect } from "react";
@@ -9,7 +10,7 @@ import SubjectPicker from "./commonComponents/SubjectPicker";
 import AttendanceScreen from "./Attendance"
 import { ref, set,get,child } from "firebase/database";
 import { db } from '../firebase/firebase';
-
+import { TopNavigationBar } from "./commonComponents/TopNavigationBar";
 
 
 export default function SubjectDetails() {
@@ -59,11 +60,12 @@ export default function SubjectDetails() {
     const showTimepicker = () => {
       showMode('time');
     };
+    
   
     return (
       <Layout style={styles.container}>
-
-        {sub ?
+        <TopNavigationBar />
+       {/*  {sub ?
         (
         <AttendanceScreen subject={selectedValue} date={date} />):(
         <>
@@ -101,7 +103,65 @@ export default function SubjectDetails() {
         </View> 
         </>)
 
-        }
+        } */}
+
+        <View style={styles.gridContainer}>
+        <Card style={[styles.cards,styles.shadowProp]}>
+                <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                    <View style={{width:"30%"}}>
+                        <Image source={require('../assets/calendar.png')} style={{width:100,height:100}} />
+                    </View>
+                
+                    <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
+                        <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>Semester : 3</Text>
+                        <Text style={{color:"#fff",marginTop:20,fontWeight:800}}>No of Subjects : 6</Text>
+                        <Text style={{color:"#fff",fontWeight:700}}>Total Strength : 60</Text>
+                    </View>
+                </View>
+          </Card>
+
+          <View style={{flexDirection:"row",flexWrap:"wrap",width:"100%",justifyContent:"center"}}>
+            <View style={styles.grid}>
+                <Text style={{textAlign:"center"}}>20MX31</Text>
+                      <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
+                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+
+            </View>
+            <View style={styles.grid}>
+                <Text style={{textAlign:"center"}}>20MX31</Text>
+                      <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
+                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+
+            </View>
+            <View style={styles.grid}>
+                <Text style={{textAlign:"center"}}>20MX31</Text>
+                      <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
+                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+
+            </View>
+            <View style={styles.grid}>
+                <Text style={{textAlign:"center"}}>20MX31</Text>
+                      <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
+                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+
+            </View>
+            <View style={styles.grid}>
+                <Text style={{textAlign:"center"}}>20MX31</Text>
+                      <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
+                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+
+            </View>
+            <View style={styles.grid}>
+                <Text style={{textAlign:"center"}}>20MX31</Text>
+                      <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
+                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+
+            </View>
+          </View>
+
+
+
+        </View>
       </Layout>
     )
 }
@@ -109,9 +169,40 @@ export default function SubjectDetails() {
 
 const styles = StyleSheet.create({
     container : {
-        paddingTop:60,
-        backgroundColor:"#fff"
+        paddingTop:40,
+        backgroundColor:"#fff",
     },
+
+    gridContainer : {
+      marginHorizontal:"5%"
+
+    },
+
+    cards:{
+      borderRadius:10,
+      marginVertical:30,
+      backgroundColor: "#11009E",
+      display:"flex",
+      flexWrap:"wrap"
+  },
+  shadowProp: {
+      shadowColor: '#171717',
+      shadowOffset: {width: -2, height: 4},
+      shadowOpacity: 0.2,
+      shadowRadius: 3,
+    },
+
+    grid: {
+      width:"30%",
+      borderWidth:2,
+      height:120,
+      borderRadius:5,
+      justifyContent:"center",
+      alignItems:"center",
+      margin:5
+    },
+
+
     main : {
         width:"75%",
         display:"flex",

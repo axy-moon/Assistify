@@ -29,9 +29,8 @@ const Welcome = ({navigation}) => {
                     </View>
                 
                     <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
-                        <Text style={{color:"#fff"}}>Date : 28-12-2023</Text>
-                        <Text style={{color:"#fff"}}>Day : Thursday</Text>
-                        <Text style={{color:"#fff",fontWeight:700}}>Total Strength : 60</Text>
+                        <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>29 December</Text>
+                        <Text style={{color:"#fff",alignItems:"flex-end",fontWeight:700,marginTop:20}}>Total Strength : 60</Text>
                     </View>
                 </View>
             </Card>
