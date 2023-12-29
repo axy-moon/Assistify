@@ -1,16 +1,18 @@
-import { View,  Button, StyleSheet, TextInput, FlatList, TouchableOpacity } from 'react-native';
+import { View,  Button, StyleSheet, TextInput, FlatList, TouchableOpacity,Image } from 'react-native';
 import React, { useEffect, useState } from 'react';
-import { Text } from "@ui-kitten/components"
+import { Layout, Text } from "@ui-kitten/components"
 import { FIRESTORE_DB } from '../firebase/firebase';
+import { Card } from '@ui-kitten/components';
 import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Entypo } from '@expo/vector-icons';
+import { TopNavigationBar } from './commonComponents/TopNavigationBar';
 
 const Todo = ({ navigation }) => {
     const [todos, setTodos] = useState([]);
     const [todo, setTodo] = useState('');
 
-    useEffect(() => {
+  /*   useEffect(() => {
         const todoRef = collection(FIRESTORE_DB, 'todos');
 
         const subscriber = onSnapshot(todoRef, {
@@ -29,7 +31,7 @@ const Todo = ({ navigation }) => {
             },
         });
         return () => subscriber();
-    }, []);
+    }, []); */
 
     const addTodo = async () => {
         const newDoc = await addDoc(collection(FIRESTORE_DB, 'todos'), { title: todo, done: false });
@@ -70,9 +72,22 @@ const Todo = ({ navigation }) => {
       var d = getDate()
 
     return (
+        <Layout>
         <View style={styles.container}>
-            <Text category='h2'> Todo List </Text>
-            <Text style={{marginLeft:10, color:"#0D1282"}}>{d}</Text>
+            <TopNavigationBar title="Todos" />
+            <Card style={[styles.cards,styles.shadowProp]}>
+                <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                    <View style={{width:"30%"}}>
+                        <Image source={require('../assets/task.png')} style={{width:100,height:100}} />
+                    </View>
+                
+                    <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
+                        <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>{d}</Text>
+                        <Text style={{color:"#fff",fontSize:23,fontWeight:800}}>Friday</Text>
+                    </View>
+                </View>
+          </Card>
+            <Text style={{marginLeft:10, color:"#0D1282"}}></Text>
             <View style={styles.form}>
                 <TextInput
                     style={styles.input}
@@ -88,6 +103,7 @@ const Todo = ({ navigation }) => {
                 </View>
             )}
         </View>
+        </Layout>
     );
 };
 
@@ -96,10 +112,11 @@ export default Todo;
 const styles = StyleSheet.create({
     container: {
         marginHorizontal: 20,
-        marginTop:70,
+        marginTop:40,
+        backgroundColor:"#FFFFFF",
+        height:"100%"
     },
     form: {
-        marginVertical: 20,
         flexDirection: 'row',
         alignItems: 'center',
     },
@@ -112,6 +129,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         marginRight:8
     },
+    cards:{
+        borderRadius:10,
+        marginVertical:30,
+        backgroundColor: "#7C81AD",
+        display:"flex",
+        flexWrap:"wrap"
+    },
+    shadowProp: {
+        shadowColor: '#171717',
+        shadowOffset: {width: -2, height: 4},
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+      },
     todoContainer: {
         flexDirection: 'row',
         alignItems: 'center',

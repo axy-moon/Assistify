@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 
 
-export const TopNavigationBar= ({ props }) => {
+export const TopNavigationBar= (props) => {
   const navigation = useNavigation();
 
   const BackAction = () => (
@@ -29,7 +29,7 @@ export const TopNavigationBar= ({ props }) => {
 
       <TopNavigation
       accessoryLeft={BackAction}
-      title="Attendance"
+      title={props.title}
       />
       
       <Divider />
