@@ -33,9 +33,9 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-between",
         alignItems:"center",
-        marginHorizontal:"1%",
+        marginHorizontal:"2%",
         backgroundColor:"#EEEEEE",
-        marginTop:40
+        marginTop:50
       },
     ico:{
         marginRight:10
