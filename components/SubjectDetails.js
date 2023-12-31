@@ -140,33 +140,33 @@ export default function SubjectDetails() {
 
             </View>
             <View style={styles.grid}>
-                <Text style={{textAlign:"center"}}>20MX31</Text>
+                <Text style={{textAlign:"center"}}>20MXAB</Text>
                       <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
-                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+                <Text style={{textAlign:"center"}}>Software Project Management</Text>
 
             </View>
             <View style={styles.grid}>
-                <Text style={{textAlign:"center"}}>20MX31</Text>
+                <Text style={{textAlign:"center"}}>20MXBO</Text>
                       <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
-                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+                <Text style={{textAlign:"center"}}>DevOps</Text>
 
             </View>
             <View style={styles.grid}>
-                <Text style={{textAlign:"center"}}>20MX31</Text>
+                <Text style={{textAlign:"center"}}>20MXBJ</Text>
                       <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
-                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+                <Text style={{textAlign:"center"}}>Human Computer Interaction</Text>
 
             </View>
             <View style={styles.grid}>
-                <Text style={{textAlign:"center"}}>20MX31</Text>
+                <Text style={{textAlign:"center"}}>20MXCA</Text>
                       <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
-                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+                <Text style={{textAlign:"center"}}>Entrepreneurship</Text>
 
             </View>
             <View style={styles.grid}>
-                <Text style={{textAlign:"center"}}>20MX31</Text>
+                <Text style={{textAlign:"center"}}>20MX36</Text>
                       <Image source={require('../assets/book.png')} style={{width:75,height:75}} />
-                <Text style={{textAlign:"center"}}>Cloud Computing</Text>
+                <Text style={{textAlign:"center"}}>Mobile Application Development</Text>
 
             </View>
           </View>
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
 
     grid: {
       width:"30%",
-      height:120,
+      height:160,
       backgroundColor:"#96B6C5",
       borderRadius:5,
       justifyContent:"center",
