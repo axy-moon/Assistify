@@ -64,7 +64,7 @@ export default function SubjectDetails() {
   
     return (
       <Layout style={styles.container}>
-        <TopNavigationBar />
+        <TopNavigationBar title="Attendance" />
        {/*  {sub ?
         (
         <AttendanceScreen subject={selectedValue} date={date} />):(

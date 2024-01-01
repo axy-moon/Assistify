@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { View, FlatList } from 'react-native';
 import { Button, Input, Text, Card } from '@ui-kitten/components';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-
+import { TopNavigationBar } from "./commonComponents/TopNavigationBar";
 const ChatScreen = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
@@ -47,7 +47,9 @@ const ChatScreen = () => {
   };
 
   return (
-    <View style={{ flex: 1 , backgroundColor:"transparent",marginTop:20}}>
+    <>
+    <View style={{ flex: 1 , backgroundColor:"transparent",marginTop:40}}>
+      <TopNavigationBar title="Chat"/>
       <FlatList
         data={messages}
         keyExtractor={(item) => item.id.toString()}
@@ -63,6 +65,7 @@ const ChatScreen = () => {
         <Button onPress={handleSend}>Send</Button>
       </View>
     </View>
+    </>
   );
 };
 
