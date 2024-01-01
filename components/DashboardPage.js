@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, FlatList } from 'react-native';
-import { ListItem, Input, Text, Button } from '@ui-kitten/components';
+import { View, FlatList, StyleSheet,Image } from 'react-native';
+import { ListItem, Input, Text, Button, Card } from '@ui-kitten/components';
 
 import moment from 'moment';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -8,6 +8,7 @@ import { ref, set,get,child } from "firebase/database";
 import { db } from '../firebase/firebase';
 import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 import { Report } from './Report';
+import { TopNavigationBar } from './commonComponents/TopNavigationBar';
 
 
 
@@ -109,8 +110,21 @@ const DashboardPage = () => {
   );
 
   return (
-      <View style={{ padding: 20 , marginTop:60 }}>
-  
+      <View style={{paddingTop:30,paddingHorizontal:"5%",backgroundColor:"#fff",width:"100%",height:"100%" }}>
+        <TopNavigationBar title="Dashboard" />
+        <Card style={[styles.cards,styles.shadowProp]}>
+                <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                    <View style={{width:"30%"}}>
+                        <Image source={require('../assets/graduates.png')} style={{width:100,height:100}} />
+                    </View>
+                
+                    <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
+                        <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>Attendance</Text>
+                        <Text style={{color:"#fff",alignItems:"flex-end",fontWeight:700,marginBottom:10}}>Reports</Text>
+                    </View>
+                </View>
+            </Card>
+
           <Input
             value={date.toLocaleDateString()}
           style={{ marginBottom:20}}
@@ -155,3 +169,21 @@ const DashboardPage = () => {
 };
 
 export default DashboardPage;
+
+const styles = StyleSheet.create({
+
+  cards:{
+      borderRadius:10,
+      marginVertical:30,
+      backgroundColor: "#176B87",
+      display:"flex",
+      flexWrap:"wrap"
+  },
+  shadowProp: {
+      shadowColor: '#171717',
+      shadowOffset: {width: -2, height: 4},
+      shadowOpacity: 0.2,
+      shadowRadius: 3,
+    },
+
+});
