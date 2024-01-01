@@ -132,7 +132,7 @@ export default function SubjectDetails() {
 
           </View>
 
-          <View style={{flexDirection:"row",flexWrap:"wrap",width:"100%",height:"55%",justifyContent:"center"}}>
+          <View style={{flexDirection:"row",flexWrap:"wrap",width:"100%",height:"53%",justifyContent:"center"}}>
             <View style={styles.grid}>
                 <Text style={{textAlign:"center"}}>20MX31</Text>
                       <Image source={require('../assets/book.png')} style={{width:75,height:75}} />

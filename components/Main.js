@@ -1,5 +1,5 @@
 import { View,StyleSheet, FlatList, Image } from 'react-native'
-import React , { useEffect } from 'react';
+import React , { useEffect,useState } from 'react';
 import { Text,Card,CircularProgressBar,Input, Layout,Button } from '@ui-kitten/components'
 import TaskList from './TaskList';
 import { List } from '@ui-kitten/components';
@@ -13,6 +13,19 @@ import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'fireb
 import FlatListBasic from './commonComponents/FlatListBasic';
 
 const Welcome = ({navigation}) => {
+    var day;
+    function getDate() {
+        const today = new Date();
+        const month = today.getMonth() + 1;
+        const year = today.getFullYear();
+        const date = today.getDate();
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        day = days[today.getDay()];
+        return `${date}/${month}/${year}`;
+      }
+      
+      
+      var d = getDate()
 
 
 
@@ -29,8 +42,8 @@ const Welcome = ({navigation}) => {
                     </View>
                 
                     <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
-                        <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>29 December</Text>
-                        <Text style={{color:"#fff",alignItems:"flex-end",fontWeight:700,marginBottom:10}}>Friday</Text>
+                        <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>{d}</Text>
+                        <Text style={{color:"#fff",alignItems:"flex-end",fontWeight:700,marginBottom:10}}>{day}</Text>
                     <Button style={{backgroundColor:"#64CCC5",borderWidth:0}} onPress={()=>navigation.navigate('Dashboard')}>View Dashboard</Button>
                     </View>
                 </View>

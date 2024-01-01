@@ -30,6 +30,7 @@ export const TopNavigationBar= (props) => {
       <TopNavigation
       accessoryLeft={BackAction}
       title={props.title}
+      style={{marginTop:10}}
       />
       
       <Divider />
