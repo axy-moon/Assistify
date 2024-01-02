@@ -115,12 +115,12 @@ const DashboardPage = () => {
         <Card style={[styles.cards,styles.shadowProp]}>
                 <View style={{width:"100%",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
                     <View style={{width:"30%"}}>
-                        <Image source={require('../assets/graduates.png')} style={{width:100,height:100}} />
+                        <Image source={require('../assets/roll-call.png')} style={{width:100,height:100}} />
                     </View>
                 
                     <View style={{width:"60%",alignItems:"center",justifyContent:"center"}}>
                         <Text style={{color:"#fff",fontSize:24,fontWeight:800}}>Attendance</Text>
-                        <Text style={{color:"#fff",alignItems:"flex-end",fontWeight:700,marginBottom:10}}>Reports</Text>
+                        <Text style={{color:"#fff",textAlign:"center",fontWeight:700,marginBottom:10}}>View Reports for Previous Records</Text>
                     </View>
                 </View>
             </Card>
