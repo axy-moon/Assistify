@@ -19,7 +19,8 @@ import Todo from './components/Todo';
 import SubjectDetails from './components/SubjectDetails';
 import DashboardPage from './components/DashboardPage';
 import ChatScreen from './components/ChatScreen';
-
+import LeftDrawer from './components/commonComponents/LeftDrawer';
+import Header from './components/Header';
 const { Navigator, Screen } = createStackNavigator();
 
 const App = () => (
@@ -28,6 +29,7 @@ const App = () => (
   <ApplicationProvider {...eva} theme={eva.light}>
     <NavigationContainer>
       <Navigator screenOptions={{headerShown: false}}>
+
         <Screen name='Main' component={Main}/>
       <Screen name='Dashboard' component={DashboardPage}/>
       <Screen name='Login' component={Login}/>

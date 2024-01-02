@@ -1,5 +1,5 @@
 import { View,StyleSheet, FlatList, Image } from 'react-native'
-import React , { useEffect,useState } from 'react';
+import React , { useEffect,useState,useRef, } from 'react';
 import { Text,Card,CircularProgressBar,Input, Layout,Button } from '@ui-kitten/components'
 import TaskList from './TaskList';
 import { List } from '@ui-kitten/components';
@@ -11,8 +11,53 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { FIRESTORE_DB } from '../firebase/firebase';
 import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
 import FlatListBasic from './commonComponents/FlatListBasic';
+import { DrawerLayoutAndroid } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const Welcome = ({navigation}) => {
+
+const Welcome = () => {
+    const drawer = useRef(null);
+  const [drawerPosition, setDrawerPosition] = useState('left');
+  const [drawerState,setDrawerState] = useState(false) 
+
+  const drawerOpen = () => {
+    if (drawerState) {
+        drawer.current.closeDrawer()
+        setDrawerState(!drawerState)
+    }
+
+    else {
+        drawer.current.openDrawer()
+        setDrawerState(!drawerState)
+
+    }
+  }
+
+  const navigationView = () => (
+    <View style={{height:"100%",backgroundColor:"#EEEEEE"}}>
+    <View style={[styles.containers, styles.navigationContainer]}>
+        <Text style={{textAlign:"left"}}>Configurations</Text>
+    </View>
+    <View style={[styles.containers, styles.navigationContainer]}>
+        <Text style={{textAlign:"left"}}>Setup New Semester</Text>
+    </View>
+    <View style={[styles.containers, styles.navigationContainer]}>
+        <Text style={{textAlign:"left"}}>Change Administration</Text>
+    </View>
+
+    </View>
+  );
+  
+  const navigation = useNavigation();
+  
+  const profileIcon = () => {
+    navigation.navigate('Profile')
+  }
+
+  const bellIcon = () => {
+    navigation.navigate('Notifications')
+  }
+  
     var day;
     function getDate() {
         const today = new Date();
@@ -31,7 +76,21 @@ const Welcome = ({navigation}) => {
 
     return(
         <>
-        <Header/>
+         <View style={styles.header}>
+                <Icon name='menu' size={32} color="#000" style={styles.ico} onPress={drawerOpen} />
+                <View style={{flexDirection:"row"}}>
+                <Icon name='notifications-outline' onPress={bellIcon} size={32} color="#000" style={styles.ico} />
+                <Icon onPress={profileIcon} name='person-circle-outline' size={32} color="#000" style={styles.ico} />
+                </View>
+        </View>
+
+        <DrawerLayoutAndroid
+        ref={drawer}
+        drawerWidth={300}
+        drawerPosition={drawerPosition}
+        renderNavigationView={navigationView}>
+          
+
         <View style={styles.container}>
             <Text category='h1' style={{marginVertical:30}}>Home</Text>
             <Card style={[styles.cards,styles.shadowProp]}>
@@ -65,6 +124,8 @@ const Welcome = ({navigation}) => {
             </View>
             <FlatListBasic/>
         </View>
+        </DrawerLayoutAndroid>
+
         </>
     );
 }
@@ -77,11 +138,6 @@ const styles = StyleSheet.create({
             alignContent:"center",
             marginHorizontal:"5%",
             backgroundColor:"#EEEEEE"
-
-
-        },
-        header:{
-            borderWidth:2
         },
 
         cards:{
@@ -114,5 +170,23 @@ const styles = StyleSheet.create({
             flexDirection:"row",
             justifyContent:"space-around",
             marginBottom:20
-          }
+          },
+          header: {
+            flexDirection:"row",
+            justifyContent:"space-between",
+            alignItems:"center",
+            marginHorizontal:"2%",
+            backgroundColor:"#EEEEEE",
+            marginTop:50
+          },
+        ico:{
+            marginRight:10
+        },
+        containers: {
+          justifyContent: 'center',
+          padding: 16,
+        },
+        navigationContainer: {
+          backgroundColor: '#ecf0f1',
+        },
 });

@@ -1,4 +1,5 @@
 import React, {useRef, useState} from 'react';
+import Header from '../Header';
 import {
   Button,
   DrawerLayoutAndroid,
@@ -7,16 +8,9 @@ import {
   View,
 } from 'react-native';
 
-const App = () => {
+const LeftDrawer = () => {
   const drawer = useRef(null);
   const [drawerPosition, setDrawerPosition] = useState('left');
-  const changeDrawerPosition = () => {
-    if (drawerPosition === 'left') {
-      setDrawerPosition('right');
-    } else {
-      setDrawerPosition('left');
-    }
-  };
 
   const navigationView = () => (
     <View style={[styles.container, styles.navigationContainer]}>
@@ -29,26 +23,24 @@ const App = () => {
   );
 
   return (
-    <DrawerLayoutAndroid
-      ref={drawer}
-      drawerWidth={300}
-      drawerPosition={drawerPosition}
-      renderNavigationView={navigationView}>
-      <View style={styles.container}>
-        <Text style={styles.paragraph}>Drawer on the {drawerPosition}!</Text>
-        <Button
-          title="Change Drawer Position"
-          onPress={() => changeDrawerPosition()}
-        />
-        <Text style={styles.paragraph}>
-          Swipe from the side or press button below to see it!
-        </Text>
-        <Button
-          title="Open drawer"
-          onPress={() => drawer.current.openDrawer()}
-        />
-      </View>
-    </DrawerLayoutAndroid>
+    <>
+    <Header/>
+        
+        <DrawerLayoutAndroid
+        ref={drawer}
+        drawerWidth={300}
+        drawerPosition={drawerPosition}
+        renderNavigationView={navigationView}>
+        
+        <View style={styles.container}>
+        
+            <Button
+            title="Open drawer"
+            onPress={() => drawer.current.openDrawer()}
+            />
+        </View>
+        </DrawerLayoutAndroid>
+    </>
   );
 };
 
@@ -69,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default LeftDrawer;
