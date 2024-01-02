@@ -6,7 +6,6 @@ import { List } from '@ui-kitten/components';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import SquareButton from './commonComponents/SquareButton';
-import Header from './Header';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { FIRESTORE_DB } from '../firebase/firebase';
 import { addDoc, collection, deleteDoc, doc, onSnapshot, updateDoc } from 'firebase/firestore';
