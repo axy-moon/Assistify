@@ -1,9 +1,7 @@
 // ChatScreen.js
-
 import React, { useState } from 'react';
 import { View, FlatList } from 'react-native';
 import { Button, Input, Text, Card } from '@ui-kitten/components';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { TopNavigationBar } from "./commonComponents/TopNavigationBar";
 const ChatScreen = () => {
   const [messages, setMessages] = useState([]);

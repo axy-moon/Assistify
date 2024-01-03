@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { View, FlatList, StyleSheet,Image } from 'react-native';
 import { ListItem, Input, Text, Button, Card } from '@ui-kitten/components';
-
-import moment from 'moment';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { ref, set,get,child } from "firebase/database";
 import { db } from '../firebase/firebase';

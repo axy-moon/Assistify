@@ -1,5 +1,5 @@
 import {  Layout,Text} from "@ui-kitten/components"
-import { View,Button,StyleSheet,TouchableOpacity } from "react-native"
+import { StyleSheet,TouchableOpacity } from "react-native"
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 

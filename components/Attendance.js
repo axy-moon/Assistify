@@ -1,12 +1,10 @@
-import { View,  StyleSheet, ScrollView } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React, { useState } from 'react'
 import StudentsList from './commonComponents/StudentsList'
-import { Text, Layout, Button } from '@ui-kitten/components'
-import SubjectPicker from './commonComponents/SubjectPicker'
+import { Text, Layout } from '@ui-kitten/components'
 
 
 const AttendanceScreen = ({ subject , date }) => {
-    const [ndate,setDate] = useState(date)
   
   return (
 
